@@ -1,12 +1,12 @@
 # COMPLETE
 
-All numbers from commit `?`; `make all` regenerates results/, figs/ and these documents.
+All numbers from commit `81a6bd05ce4e544332c37230dd5f0a7271390afc`; `make all` regenerates results/, figs/ and these documents.
 
 ## The four deliverables hold
 
-1. **The cause** (FINDINGS 4-6). Response per cycle against pressurisation rate and depth; held-out comparison of 18 explanations; transport delay tau = 2.35 h [1.99, 3.02], growing with depth (p = 3.4e-05; held-out +10.9 nats); fault-own delay loses 46.7 [20.6, 79.4].
+1. **The cause** (FINDINGS 4-6). Response per cycle against pressurisation rate and depth; held-out comparison of 21 explanations; transport delay tau = 2.35 h [1.99, 3.02], growing with depth (p = 3.4e-05; held-out +10.9 nats); fault-own delay loses 46.7 [20.6, 79.4].
 2. **The prediction** (FINDINGS 7). Slower ramps to the same pressure: peak lag 2.18 -> 0.98 h, excess events 238 -> 1963 ± 307 (jackknife), with the rate-and-state bracket the data allow.
-3. **The test** (FINDINGS 8). 'rate3@300+hold72@600' with occupancy detection and the existing gauge: every key pair separated with E[dll]/phi >= 5; 15.5 days, 332 MWh deferred, expected largest magnitude 0.23; Monte-Carlo check in results/design_mc.json.
+3. **The test** (FINDINGS 8). 'rate2@300+hold48@600' with occupancy detection and the existing gauge: every key pair separated with E[dll]/phi >= 5; 12.8 days, 234 MWh deferred, expected largest magnitude 0.35; Monte-Carlo check in results/design_mc.json.
 4. **FINDINGS.md** (each claim with its evidence), **REPORT.md** (each criterion against the floor, what failed, what remains open), **one command** (`make all`).
 
 ## The published diffusion front is reproduced
@@ -23,9 +23,11 @@ D = L^2/(4 tau) at the cloud's median depth below the lateral (L = 584 m) for 1-
 | dieterich+diffusion(ta=178h) | 0.1458 | 13.6 [1.1, 25.9] | 3.87 | 6.12 |
 | dieterich+diffusion | 0.1450 | 14.8 [5.3, 24.8] | 3.19 | 7.43 |
 | exp+diffusion | 0.1449 | 15.0 [5.6, 25.0] | 2.35 | 10.07 |
+| exprate+diffusion | 0.1446 | 15.5 [6.0, 25.6] | 2.35 | 10.07 |
 | dieterich+lag | 0.1442 | 16.0 [5.6, 26.8] | 10.56 | - |
 | exp+cascade | 0.1437 | 16.8 [6.7, 27.4] | - | - |
 | exp+lag | 0.1435 | 17.2 [6.3, 28.4] | 10.56 | - |
+| exp+gamma | 0.1425 | 18.8 [7.3, 31.3] | 9.51 | 2.49 |
 | exp+diffusion+poro | 0.1423 | 19.1 [7.9, 30.7] | 1.30 | 18.25 |
 | dieterich+cascade | 0.1418 | 19.9 [8.3, 33.0] | - | - |
 | exp+shift | 0.1311 | 36.9 [9.2, 68.9] | 5.75 | - |
@@ -37,6 +39,7 @@ D = L^2/(4 tau) at the cloud's median depth below the lateral (L = 584 m) for 1-
 | paper:D=0.43(4piDt) | 0.0842 | 111.1 [51.1, 175.7] | 17.53 | 1.35 |
 | paper:D=0.43(4Dt) | 0.0233 | 207.4 [110.7, 313.1] | 55.08 | 0.43 |
 | coulomb | -0.0011 | 246.1 [144.4, 351.7] | - | - |
+| dieterich:nucleation | -0.0097 | 259.7 [147.6, 375.0] | - | - |
 
 Against the independent fault-zone diffusivity 0.08-0.33 m2/s: the transport times imply 2.3-10.3 m2/s at the catalogue's depths and fall in the range only within ~34-133 m (FINDINGS 6).
 

@@ -40,6 +40,11 @@
    "slow2fast": -0.2950587017214804,
    "fast2slow": 0.17112806018856577
   },
+  "dieterich:nucleation": {
+   "loco": -0.009716673924142091,
+   "slow2fast": -0.01050351280923071,
+   "fast2slow": -0.003464913208623394
+  },
   "exp": {
    "loco": 0.10277413359013933,
    "slow2fast": 0.17455537170128935,
@@ -65,6 +70,11 @@
    "slow2fast": 0.19743442776410494,
    "fast2slow": 0.17341675641805293
   },
+  "exp+gamma": {
+   "loco": 0.1424545292075264,
+   "slow2fast": 0.22832785371113998,
+   "fast2slow": 0.1611704252741372
+  },
   "exp+lag": {
    "loco": 0.14348946293698178,
    "slow2fast": 0.2270754580021111,
@@ -74,6 +84,11 @@
    "loco": 0.13105262603791254,
    "slow2fast": 0.1847636854863967,
    "fast2slow": 0.13862670381178957
+  },
+  "exprate+diffusion": {
+   "loco": 0.1445860433946547,
+   "slow2fast": 0.19306608777295817,
+   "fast2slow": 0.17313553011690277
   },
   "paper:D=0.43(4Dt)": {
    "loco": 0.023332921328549954,
@@ -177,16 +192,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.3194091452487555,
-    "exp+diffusion -> nucleation": 12.52348512601452,
-    "nucleation -> exp+diffusion": 176.37151912267768,
-    "exp+diffusion -> exp+cascade": 0.31287755716766696,
-    "exp+cascade -> exp+diffusion": 0.3360243918532433,
-    "exp+lag -> exp+diffusion": 0.20033438050768382
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.3159397666113364,
+    "exp+diffusion -> nucleation": 13.860032287866488,
+    "nucleation -> exp+diffusion": 103.28066150983886,
+    "exp+diffusion -> exp+cascade": 0.42402877184258614,
+    "exp+cascade -> exp+diffusion": 5.734729162178155,
+    "exp+lag -> exp+diffusion": 0.2405971989292084
    },
-   "max_mag": 0.1771456625741121,
-   "n_events": 1056.8476493727496,
-   "min_sep": 0.31287755716766696,
+   "max_mag": 0.24611378320533658,
+   "n_events": 2168.716116753114,
+   "min_sep": 0.42402877184258614,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -200,16 +215,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.3401061041349749,
-    "exp+diffusion -> nucleation": 14.443753312827766,
-    "nucleation -> exp+diffusion": 227.9301003833193,
-    "exp+diffusion -> exp+cascade": 0.32124167746383137,
-    "exp+cascade -> exp+diffusion": 0.3790823544172781,
-    "exp+lag -> exp+diffusion": 0.21164282061818085
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.534256019561326,
+    "exp+diffusion -> nucleation": 15.595398108037443,
+    "nucleation -> exp+diffusion": 132.18256280052356,
+    "exp+diffusion -> exp+cascade": 0.46900042180368473,
+    "exp+cascade -> exp+diffusion": 6.732745598501424,
+    "exp+lag -> exp+diffusion": 0.26382794343135174
    },
-   "max_mag": 0.1771456625741121,
-   "n_events": 1056.8476493727496,
-   "min_sep": 0.32124167746383137,
+   "max_mag": 0.24611378320533658,
+   "n_events": 2168.716116753114,
+   "min_sep": 0.46900042180368473,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -223,16 +238,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.3659883390837422,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.581299619587753,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.1771456625741121,
-   "n_events": 1056.8476493727496,
-   "min_sep": 0.3659883390837422,
+   "max_mag": 0.24611378320533658,
+   "n_events": 2168.716116753114,
+   "min_sep": 2.581299619587753,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -246,16 +261,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.40306370332314145,
-    "exp+diffusion -> nucleation": 18.214409090188155,
-    "nucleation -> exp+diffusion": 319.178009767229,
-    "exp+diffusion -> exp+cascade": 18.625086233002094,
-    "exp+cascade -> exp+diffusion": 1.9017468069032475,
-    "exp+lag -> exp+diffusion": 0.34011204614898816
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.126667223710683,
+    "exp+diffusion -> nucleation": 25.685925965120987,
+    "nucleation -> exp+diffusion": 180.70822609808056,
+    "exp+diffusion -> exp+cascade": 0.8097913133606198,
+    "exp+cascade -> exp+diffusion": 17.550097088509574,
+    "exp+lag -> exp+diffusion": 0.5301118426614266
    },
-   "max_mag": 0.18301616582763133,
-   "n_events": 1123.5327596058669,
-   "min_sep": 0.40306370332314145,
+   "max_mag": 0.2975977071936221,
+   "n_events": 3708.9353194578675,
+   "min_sep": 0.8097913133606198,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -269,16 +284,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.425863505788584,
-    "exp+diffusion -> nucleation": 19.650690629449173,
-    "nucleation -> exp+diffusion": 401.848453423976,
-    "exp+diffusion -> exp+cascade": 19.705768866966764,
-    "exp+cascade -> exp+diffusion": 2.0631103413397796,
-    "exp+lag -> exp+diffusion": 0.3564716930973191
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.625377403282982,
+    "exp+diffusion -> nucleation": 17.178734544333565,
+    "nucleation -> exp+diffusion": 229.49299040163896,
+    "exp+diffusion -> exp+cascade": 1.0052761703327633,
+    "exp+cascade -> exp+diffusion": 20.752849888634046,
+    "exp+lag -> exp+diffusion": 0.58473544757544
    },
-   "max_mag": 0.18301616582763133,
-   "n_events": 1123.5327596058669,
-   "min_sep": 0.425863505788584,
+   "max_mag": 0.2975977071936221,
+   "n_events": 3708.9353194578675,
+   "min_sep": 1.0052761703327633,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -292,16 +307,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.45758762034620304,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.712032679716685,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.18301616582763133,
-   "n_events": 1123.5327596058669,
-   "min_sep": 0.45758762034620304,
+   "max_mag": 0.2975977071936221,
+   "n_events": 3708.9353194578675,
+   "min_sep": 5.712032679716685,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -315,16 +330,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.008113185048387,
-    "exp+diffusion -> nucleation": 36.910895672866445,
-    "nucleation -> exp+diffusion": 173.69041941832074,
-    "exp+diffusion -> exp+cascade": 1.9983462960581164,
-    "exp+cascade -> exp+diffusion": 1.4138547615229982,
-    "exp+lag -> exp+diffusion": 0.8624327239840568
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.058265643152481,
+    "exp+diffusion -> nucleation": 32.61505292018546,
+    "nucleation -> exp+diffusion": 150.36632327577126,
+    "exp+diffusion -> exp+cascade": 1.5882005953167209,
+    "exp+cascade -> exp+diffusion": 1.3240938348080817,
+    "exp+lag -> exp+diffusion": 0.7765712167456513
    },
-   "max_mag": 0.27880626986880674,
-   "n_events": 3049.2157215688926,
-   "min_sep": 1.008113185048387,
+   "max_mag": 0.29146694743168555,
+   "n_events": 3479.3477021046915,
+   "min_sep": 1.058265643152481,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -338,16 +353,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.0973320939688165,
-    "exp+diffusion -> nucleation": 42.61944520772931,
-    "nucleation -> exp+diffusion": 232.57342427467484,
-    "exp+diffusion -> exp+cascade": 1.5276599897815686,
-    "exp+cascade -> exp+diffusion": 1.7907372922682043,
-    "exp+lag -> exp+diffusion": 0.9888120758359946
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.1674426309668888,
+    "exp+diffusion -> nucleation": 39.827740627310504,
+    "nucleation -> exp+diffusion": 206.52354016377603,
+    "exp+diffusion -> exp+cascade": 1.8594013590100076,
+    "exp+cascade -> exp+diffusion": 1.6742780776621657,
+    "exp+lag -> exp+diffusion": 0.9093130026908511
    },
-   "max_mag": 0.27880626986880674,
-   "n_events": 3049.2157215688926,
-   "min_sep": 1.0973320939688165,
+   "max_mag": 0.29146694743168555,
+   "n_events": 3479.3477021046915,
+   "min_sep": 1.1674426309668888,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -361,16 +376,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 3.709544049861506,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 3.454135695857076,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.27880626986880674,
-   "n_events": 3049.2157215688926,
-   "min_sep": 3.709544049861506,
+   "max_mag": 0.29146694743168555,
+   "n_events": 3479.3477021046915,
+   "min_sep": 3.454135695857076,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -384,16 +399,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.248764797747299,
-    "exp+diffusion -> nucleation": 103.07815682006822,
-    "nucleation -> exp+diffusion": 286.45301915496225,
-    "exp+diffusion -> exp+cascade": 6.977217429157918,
-    "exp+cascade -> exp+diffusion": 3.2659393934845866,
-    "exp+lag -> exp+diffusion": 2.2016406320435635
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.6703340047624806,
+    "exp+diffusion -> nucleation": 432.21800461013845,
+    "nucleation -> exp+diffusion": 251.42157856262475,
+    "exp+diffusion -> exp+cascade": 7.880863273232535,
+    "exp+cascade -> exp+diffusion": 3.0404971536836456,
+    "exp+lag -> exp+diffusion": 2.163190107400169
    },
-   "max_mag": 0.31337589804970345,
-   "n_events": 4371.904245980636,
-   "min_sep": 2.248764797747299,
+   "max_mag": 0.3257529380962687,
+   "n_events": 4973.892698571376,
+   "min_sep": 2.6703340047624806,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -407,17 +422,17 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.8007099176311385,
-    "exp+diffusion -> nucleation": 128.80196667862856,
-    "nucleation -> exp+diffusion": 482.16761036564003,
-    "exp+diffusion -> exp+cascade": 9.825821130380064,
-    "exp+cascade -> exp+diffusion": 4.447564302453429,
-    "exp+lag -> exp+diffusion": 2.8233841842302354
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 3.2827748085665007,
+    "exp+diffusion -> nucleation": 120.5949200469513,
+    "nucleation -> exp+diffusion": 441.0107917273858,
+    "exp+diffusion -> exp+cascade": 10.28903802849345,
+    "exp+cascade -> exp+diffusion": 4.1228241967119175,
+    "exp+lag -> exp+diffusion": 2.8402981660919977
    },
-   "max_mag": 0.31337589804970345,
-   "n_events": 4371.904245980636,
-   "min_sep": 2.8007099176311385,
-   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+   "max_mag": 0.3257529380962687,
+   "n_events": 4973.892698571376,
+   "min_sep": 3.2827748085665007,
+   "hardest": "exp+lag -> exp+diffusion"
   },
   {
    "design": "hold72@450",
@@ -430,16 +445,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 19.136434551332968,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 19.68556579371443,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.31337589804970345,
-   "n_events": 4371.904245980636,
-   "min_sep": 19.136434551332968,
+   "max_mag": 0.3257529380962687,
+   "n_events": 4973.892698571376,
+   "min_sep": 19.68556579371443,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -453,16 +468,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.17514348916302,
-    "exp+diffusion -> nucleation": 55.501210939685734,
-    "nucleation -> exp+diffusion": 184.10566940242052,
-    "exp+diffusion -> exp+cascade": 2.848341325221554,
-    "exp+cascade -> exp+diffusion": 4.833760637806336,
-    "exp+lag -> exp+diffusion": 2.419451497535192
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.5986828620098095,
+    "exp+diffusion -> nucleation": 51.42971376600235,
+    "nucleation -> exp+diffusion": 160.56351539790057,
+    "exp+diffusion -> exp+cascade": 3.3640573323245917,
+    "exp+cascade -> exp+diffusion": 4.073589764339886,
+    "exp+lag -> exp+diffusion": 2.4956769959235316
    },
-   "max_mag": 0.3478520412891135,
-   "n_events": 6262.2437016746735,
-   "min_sep": 2.848341325221554,
+   "max_mag": 0.3562742232078816,
+   "n_events": 6836.813276208023,
+   "min_sep": 3.3640573323245917,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -476,16 +491,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 6.0465510503418045,
-    "exp+diffusion -> nucleation": 46.10771893305446,
-    "nucleation -> exp+diffusion": 248.23426343656956,
-    "exp+diffusion -> exp+cascade": 3.238547692609245,
-    "exp+cascade -> exp+diffusion": 6.4601675757839985,
-    "exp+lag -> exp+diffusion": 2.9245791005860156
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 6.528098550492359,
+    "exp+diffusion -> nucleation": 60.773355419254585,
+    "nucleation -> exp+diffusion": 222.7655851817035,
+    "exp+diffusion -> exp+cascade": 3.900677763558633,
+    "exp+cascade -> exp+diffusion": 5.4440804187997855,
+    "exp+lag -> exp+diffusion": 3.0315332098543877
    },
-   "max_mag": 0.3478520412891135,
-   "n_events": 6262.2437016746735,
-   "min_sep": 3.238547692609245,
+   "max_mag": 0.3562742232078816,
+   "n_events": 6836.813276208023,
+   "min_sep": 3.900677763558633,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -499,16 +514,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 23.810613697143708,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 24.059017736162787,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.3478520412891135,
-   "n_events": 6262.2437016746735,
-   "min_sep": 23.810613697143708,
+   "max_mag": 0.3562742232078816,
+   "n_events": 6836.813276208023,
+   "min_sep": 24.059017736162787,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -522,16 +537,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 7.6307073973594015,
-    "exp+diffusion -> nucleation": 25.740383125994413,
-    "nucleation -> exp+diffusion": 415.3109903110244,
-    "exp+diffusion -> exp+cascade": 28.34592324569394,
-    "exp+cascade -> exp+diffusion": 2.078607261299112,
-    "exp+lag -> exp+diffusion": 0.9782868923434762
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 17.270009694928376,
+    "exp+diffusion -> nucleation": 120.6425134891424,
+    "nucleation -> exp+diffusion": 416.6288532788558,
+    "exp+diffusion -> exp+cascade": 8.564458638473297,
+    "exp+cascade -> exp+diffusion": 78.12912605857764,
+    "exp+lag -> exp+diffusion": 4.758935791641306
    },
-   "max_mag": 0.21280596986454045,
-   "n_events": 1532.6109803319296,
-   "min_sep": 2.078607261299112,
+   "max_mag": 0.3527720850608971,
+   "n_events": 6591.7538204117445,
+   "min_sep": 8.564458638473297,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -545,16 +560,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 8.166492643091715,
-    "exp+diffusion -> nucleation": 26.874278198260072,
-    "nucleation -> exp+diffusion": 549.8059182508978,
-    "exp+diffusion -> exp+cascade": 29.699778198800686,
-    "exp+cascade -> exp+diffusion": 2.2914524350962893,
-    "exp+lag -> exp+diffusion": 1.0286992702986026
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 19.602318692193876,
+    "exp+diffusion -> nucleation": 278.55603994630474,
+    "nucleation -> exp+diffusion": 640.4950234562043,
+    "exp+diffusion -> exp+cascade": 10.864283392940706,
+    "exp+cascade -> exp+diffusion": 99.37900092022392,
+    "exp+lag -> exp+diffusion": 5.592479829543663
    },
-   "max_mag": 0.21280596986454045,
-   "n_events": 1532.6109803319296,
-   "min_sep": 2.2914524350962893,
+   "max_mag": 0.3527720850608971,
+   "n_events": 6591.7538204117445,
+   "min_sep": 10.864283392940706,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -568,16 +583,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 8.899230589268427,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 51.17890052396706,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.21280596986454045,
-   "n_events": 1532.6109803319296,
-   "min_sep": 8.899230589268427,
+   "max_mag": 0.3527720850608971,
+   "n_events": 6591.7538204117445,
+   "min_sep": 51.17890052396706,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -591,16 +606,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 3.670533354728377,
-    "exp+diffusion -> nucleation": 38.061842271356454,
-    "nucleation -> exp+diffusion": 359.2418573338541,
-    "exp+diffusion -> exp+cascade": 25.105710224351242,
-    "exp+cascade -> exp+diffusion": 11.87402910453875,
-    "exp+lag -> exp+diffusion": 0.9165481690811248
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.517622992485485,
+    "exp+diffusion -> nucleation": 88.5570033367394,
+    "nucleation -> exp+diffusion": 348.6058180350824,
+    "exp+diffusion -> exp+cascade": 5.487276663162447,
+    "exp+cascade -> exp+diffusion": 49.37558540212922,
+    "exp+lag -> exp+diffusion": 2.874287579128577
    },
-   "max_mag": 0.22829246225156777,
-   "n_events": 1801.0796341085113,
-   "min_sep": 3.670533354728377,
+   "max_mag": 0.321932760184526,
+   "n_events": 4779.73740589043,
+   "min_sep": 4.517622992485485,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -614,16 +629,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.029786313423756,
-    "exp+diffusion -> nucleation": 40.60920574482816,
-    "nucleation -> exp+diffusion": 482.51058404776177,
-    "exp+diffusion -> exp+cascade": 19.547951512669897,
-    "exp+cascade -> exp+diffusion": 13.789170018218101,
-    "exp+lag -> exp+diffusion": 0.971556565166793
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.076983094208117,
+    "exp+diffusion -> nucleation": 106.9010414594486,
+    "nucleation -> exp+diffusion": 536.1567114991935,
+    "exp+diffusion -> exp+cascade": 6.749925136795355,
+    "exp+cascade -> exp+diffusion": 60.95156992668217,
+    "exp+lag -> exp+diffusion": 3.2740662842152233
    },
-   "max_mag": 0.22829246225156777,
-   "n_events": 1801.0796341085113,
-   "min_sep": 4.029786313423756,
+   "max_mag": 0.321932760184526,
+   "n_events": 4779.73740589043,
+   "min_sep": 5.076983094208117,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -637,16 +652,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.361724130765651,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 15.794950617303584,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.22829246225156777,
-   "n_events": 1801.0796341085113,
-   "min_sep": 4.361724130765651,
+   "max_mag": 0.321932760184526,
+   "n_events": 4779.73740589043,
+   "min_sep": 15.794950617303584,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -660,16 +675,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.7603281601961953,
-    "exp+diffusion -> nucleation": 15.093450231059705,
-    "nucleation -> exp+diffusion": 183.31837955414153,
-    "exp+diffusion -> exp+cascade": 0.47834457923181617,
-    "exp+cascade -> exp+diffusion": 1.8272430730585256,
-    "exp+lag -> exp+diffusion": 0.20072758907167554
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.261200843352981,
+    "exp+diffusion -> nucleation": 9.42153482696449,
+    "nucleation -> exp+diffusion": 141.8936623523282,
+    "exp+diffusion -> exp+cascade": 0.40899601468481706,
+    "exp+cascade -> exp+diffusion": 8.039196054546665,
+    "exp+lag -> exp+diffusion": 0.28153213559016876
    },
-   "max_mag": 0.1921660960211525,
-   "n_events": 1235.957995452434,
-   "min_sep": 0.47834457923181617,
+   "max_mag": 0.24409649187678126,
+   "n_events": 2123.5928705308265,
+   "min_sep": 0.40899601468481706,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -683,16 +698,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.8236126646029334,
-    "exp+diffusion -> nucleation": 16.08761718059759,
-    "nucleation -> exp+diffusion": 219.83961523312496,
-    "exp+diffusion -> exp+cascade": 16.359177858895237,
-    "exp+cascade -> exp+diffusion": 2.1083108130292203,
-    "exp+lag -> exp+diffusion": 0.21240766818959855
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.4667211322775984,
+    "exp+diffusion -> nucleation": 10.54879033286852,
+    "nucleation -> exp+diffusion": 164.70104866027305,
+    "exp+diffusion -> exp+cascade": 0.45552725823836226,
+    "exp+cascade -> exp+diffusion": 9.436875020863226,
+    "exp+lag -> exp+diffusion": 0.3104274071151849
    },
-   "max_mag": 0.1921660960211525,
-   "n_events": 1235.957995452434,
-   "min_sep": 0.8236126646029334,
+   "max_mag": 0.24409649187678126,
+   "n_events": 2123.5928705308265,
+   "min_sep": 0.45552725823836226,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -706,16 +721,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.8375685647633873,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.5117444117458945,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.1921660960211525,
-   "n_events": 1235.957995452434,
-   "min_sep": 0.8375685647633873,
+   "max_mag": 0.24409649187678126,
+   "n_events": 2123.5928705308265,
+   "min_sep": 2.5117444117458945,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -729,16 +744,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 8.052782475115691,
-    "exp+diffusion -> nucleation": 227.19322692572405,
-    "nucleation -> exp+diffusion": 373.67824433123974,
-    "exp+diffusion -> exp+cascade": 29.80210966261211,
-    "exp+cascade -> exp+diffusion": 7.434050038809801,
-    "exp+lag -> exp+diffusion": 4.771710491215799
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 9.495560473404112,
+    "exp+diffusion -> nucleation": 212.68354362258106,
+    "nucleation -> exp+diffusion": 337.37156934855784,
+    "exp+diffusion -> exp+cascade": 24.587672952591674,
+    "exp+cascade -> exp+diffusion": 9.998766842562873,
+    "exp+lag -> exp+diffusion": 4.791046814775655
    },
-   "max_mag": 0.35493365333281,
-   "n_events": 6741.949734551505,
-   "min_sep": 7.434050038809801,
+   "max_mag": 0.3674822333236888,
+   "n_events": 7684.007351159145,
+   "min_sep": 9.495560473404112,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -752,16 +767,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 11.297936814096829,
-    "exp+diffusion -> nucleation": 324.9919617124906,
-    "nucleation -> exp+diffusion": 781.5246624439148,
-    "exp+diffusion -> exp+cascade": 36.5641561410107,
-    "exp+cascade -> exp+diffusion": 11.098364812829459,
-    "exp+lag -> exp+diffusion": 7.390590927008361
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 12.92952469708689,
+    "exp+diffusion -> nucleation": 1536.8416735534438,
+    "nucleation -> exp+diffusion": 732.6752373801455,
+    "exp+diffusion -> exp+cascade": 39.11406406156311,
+    "exp+cascade -> exp+diffusion": 14.890344713055129,
+    "exp+lag -> exp+diffusion": 7.6285657329872265
    },
-   "max_mag": 0.35493365333281,
-   "n_events": 6741.949734551505,
-   "min_sep": 11.098364812829459,
+   "max_mag": 0.3674822333236888,
+   "n_events": 7684.007351159145,
+   "min_sep": 12.92952469708689,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -775,16 +790,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 69.48342415414845,
-    "exp+diffusion -> nucleation": 1000.0,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 73.09821552264475,
+    "exp+diffusion -> nucleation": 1536.8416735534438,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.35493365333281,
-   "n_events": 6741.949734551505,
-   "min_sep": 69.48342415414845,
+   "max_mag": 0.3674822333236888,
+   "n_events": 7684.007351159145,
+   "min_sep": 73.09821552264475,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -798,16 +813,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 11.814894848450422,
-    "exp+diffusion -> nucleation": 45.86952420519265,
-    "nucleation -> exp+diffusion": 486.7399050025856,
-    "exp+diffusion -> exp+cascade": 45.92900594250841,
-    "exp+cascade -> exp+diffusion": 15.836489065549358,
-    "exp+lag -> exp+diffusion": 1.7773223741323818
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 52.86302800840713,
+    "exp+diffusion -> nucleation": 1219.3721325872611,
+    "nucleation -> exp+diffusion": 524.6286257828751,
+    "exp+diffusion -> exp+cascade": 25.741742070369583,
+    "exp+cascade -> exp+diffusion": 178.939227474576,
+    "exp+lag -> exp+diffusion": 8.684967340932417
    },
-   "max_mag": 0.2316426233939136,
-   "n_events": 1865.0810833652383,
-   "min_sep": 11.814894848450422,
+   "max_mag": 0.38659375302585486,
+   "n_events": 9377.73081648073,
+   "min_sep": 25.741742070369583,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -821,16 +836,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 12.971006039731492,
-    "exp+diffusion -> nucleation": 48.05549011737094,
-    "nucleation -> exp+diffusion": 769.8003617151821,
-    "exp+diffusion -> exp+cascade": 48.113381883495094,
-    "exp+cascade -> exp+diffusion": 17.93247196664379,
-    "exp+lag -> exp+diffusion": 1.9051398617361883
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 61.10209831543216,
+    "exp+diffusion -> nucleation": 362.8197526046506,
+    "nucleation -> exp+diffusion": 941.2154219280828,
+    "exp+diffusion -> exp+cascade": 39.52888802231064,
+    "exp+cascade -> exp+diffusion": 243.68408871788415,
+    "exp+lag -> exp+diffusion": 11.467186690462768
    },
-   "max_mag": 0.2316426233939136,
-   "n_events": 1865.0810833652383,
-   "min_sep": 12.971006039731492,
+   "max_mag": 0.38659375302585486,
+   "n_events": 9377.73081648073,
+   "min_sep": 39.52888802231064,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -844,16 +859,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 14.12601143848633,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 157.58656406843056,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.2316426233939136,
-   "n_events": 1865.0810833652383,
-   "min_sep": 14.12601143848633,
+   "max_mag": 0.38659375302585486,
+   "n_events": 9377.73081648073,
+   "min_sep": 157.58656406843056,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -867,16 +882,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.4195421917502244,
-    "exp+diffusion -> nucleation": 76.44953165884863,
-    "nucleation -> exp+diffusion": 434.73542938189075,
-    "exp+diffusion -> exp+cascade": 76.58089408654632,
-    "exp+cascade -> exp+diffusion": 50.7178426855744,
-    "exp+lag -> exp+diffusion": 1.6888042141094957
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 17.02739528112943,
+    "exp+diffusion -> nucleation": 183.79968405336058,
+    "nucleation -> exp+diffusion": 451.7060161569116,
+    "exp+diffusion -> exp+cascade": 15.65401739860863,
+    "exp+cascade -> exp+diffusion": 112.45894799795678,
+    "exp+lag -> exp+diffusion": 5.217205343599744
    },
-   "max_mag": 0.25079742012631046,
-   "n_events": 2277.212742292822,
-   "min_sep": 2.4195421917502244,
+   "max_mag": 0.3515259347128513,
+   "n_events": 6506.6907995643605,
+   "min_sep": 15.65401739860863,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -890,16 +905,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.6400881069484967,
-    "exp+diffusion -> nucleation": 84.39432103194531,
-    "nucleation -> exp+diffusion": 706.0343513513262,
-    "exp+diffusion -> exp+cascade": 81.18493083259455,
-    "exp+cascade -> exp+diffusion": 60.755008241303585,
-    "exp+lag -> exp+diffusion": 1.8303259379281371
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 19.390692443979788,
+    "exp+diffusion -> nucleation": 262.4171212835063,
+    "nucleation -> exp+diffusion": 821.8554689349285,
+    "exp+diffusion -> exp+cascade": 22.314504956759265,
+    "exp+cascade -> exp+diffusion": 146.0682166881952,
+    "exp+lag -> exp+diffusion": 6.314429563962221
    },
-   "max_mag": 0.25079742012631046,
-   "n_events": 2277.212742292822,
-   "min_sep": 2.6400881069484967,
+   "max_mag": 0.3515259347128513,
+   "n_events": 6506.6907995643605,
+   "min_sep": 19.390692443979788,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -913,16 +928,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.003182804247899,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 57.524583230537246,
     "exp+diffusion -> nucleation": 1000.0,
     "nucleation -> exp+diffusion": 1000.0,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.25079742012631046,
-   "n_events": 2277.212742292822,
-   "min_sep": 4.003182804247899,
+   "max_mag": 0.3515259347128513,
+   "n_events": 6506.6907995643605,
+   "min_sep": 57.524583230537246,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   },
   {
@@ -936,16 +951,16 @@
     "tier": 0
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.435744587941372,
-    "exp+diffusion -> nucleation": 28.953285533693133,
-    "nucleation -> exp+diffusion": 679.6608546770381,
-    "exp+diffusion -> exp+cascade": 28.960232679708497,
-    "exp+cascade -> exp+diffusion": 19.13568827808922,
-    "exp+lag -> exp+diffusion": 1.3378336217856486
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 85.36671489665696,
+    "exp+diffusion -> nucleation": 272.3355690279968,
+    "nucleation -> exp+diffusion": 693.094297752169,
+    "exp+diffusion -> exp+cascade": 145.05095359173538,
+    "exp+cascade -> exp+diffusion": 235.131185007951,
+    "exp+lag -> exp+diffusion": 10.075612323740643
    },
-   "max_mag": 0.18843513004642773,
-   "n_events": 1188.8174263626056,
-   "min_sep": 4.435744587941372,
+   "max_mag": 0.4013694551398359,
+   "n_events": 10939.092376089518,
+   "min_sep": 85.36671489665696,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -959,16 +974,16 @@
     "tier": 1
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.526742531874788,
-    "exp+diffusion -> nucleation": 30.271542282707514,
-    "nucleation -> exp+diffusion": 1039.7158362111386,
-    "exp+diffusion -> exp+cascade": 30.273508646400614,
-    "exp+cascade -> exp+diffusion": 20.533658325698525,
-    "exp+lag -> exp+diffusion": 1.3792667195389186
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 96.95524654316978,
+    "exp+diffusion -> nucleation": 2271.071409150016,
+    "nucleation -> exp+diffusion": 1180.8473984787697,
+    "exp+diffusion -> exp+cascade": 42.17310281054779,
+    "exp+cascade -> exp+diffusion": 334.4304097461081,
+    "exp+lag -> exp+diffusion": 13.005920541942032
    },
-   "max_mag": 0.18843513004642773,
-   "n_events": 1188.8174263626056,
-   "min_sep": 4.526742531874788,
+   "max_mag": 0.4013694551398359,
+   "n_events": 10939.092376089518,
+   "min_sep": 42.17310281054779,
    "hardest": "exp+lag -> exp+diffusion"
   },
   {
@@ -982,16 +997,16 @@
     "tier": 3
    },
    "pairs": {
-    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.815734763792989,
-    "exp+diffusion -> nucleation": 1000.0,
-    "nucleation -> exp+diffusion": 1039.7158362111386,
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 205.73519610458243,
+    "exp+diffusion -> nucleation": 2271.071409150016,
+    "nucleation -> exp+diffusion": 1180.8473984787697,
     "exp+diffusion -> exp+cascade": 1000.0,
     "exp+cascade -> exp+diffusion": 1000.0,
     "exp+lag -> exp+diffusion": 1000.0
    },
-   "max_mag": 0.18843513004642773,
-   "n_events": 1188.8174263626056,
-   "min_sep": 5.815734763792989,
+   "max_mag": 0.4013694551398359,
+   "n_events": 10939.092376089518,
+   "min_sep": 205.73519610458243,
    "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
   }
  ],
@@ -1012,14 +1027,24 @@
    "deepgauge"
   ],
   [
-   "hold48@450+rate2@300",
+   "rate3@300",
    "occupancy",
    "gauge"
   ],
   [
-   "hold48@450+rate2@300",
+   "rate3@300",
    "counts",
    "gauge"
+  ],
+  [
+   "rate3@300",
+   "counts",
+   "deepgauge"
+  ],
+  [
+   "rate3@300x2",
+   "counts",
+   "deepgauge"
   ],
   [
    "amp3@6h",
@@ -1038,16 +1063,6 @@
   ],
   [
    "hold72@600",
-   "occupancy",
-   "gauge"
-  ],
-  [
-   "hold72@600",
-   "counts",
-   "gauge"
-  ],
-  [
-   "hold72@600",
    "counts",
    "deepgauge"
   ],
@@ -1060,6 +1075,36 @@
    "rate3@300+hold72@600",
    "counts",
    "gauge"
+  ],
+  [
+   "rate3@300+hold72@600",
+   "counts",
+   "deepgauge"
+  ],
+  [
+   "rate2@300+hold48@600",
+   "occupancy",
+   "gauge"
+  ],
+  [
+   "rate2@300+hold48@600",
+   "counts",
+   "gauge"
+  ],
+  [
+   "rate2@300+hold48@600",
+   "counts",
+   "deepgauge"
+  ],
+  [
+   "rate3@300x2+hold72@600",
+   "occupancy",
+   "gauge"
+  ],
+  [
+   "rate3@300x2+hold72@600",
+   "counts",
+   "deepgauge"
   ]
  ],
  "axes": {
@@ -1078,19 +1123,19 @@
   "separation": {
    "BM2023_min": 0.8962189516578292,
    "BM2023_hardest": "exp+diffusion -> exp+cascade",
-   "best_min": 69.48342415414845,
+   "best_min": 205.73519610458243,
    "met": true
   },
   "cost": {
    "BM2023_MWh": 93.20500000000001,
    "cheapest_decisive": {
-    "design": "rate3@300+hold72@600",
+    "design": "rate2@300+hold48@600",
     "mode": "occupancy",
     "monitoring": "gauge",
     "tier": 0,
-    "MWh": 332.5,
-    "days": 15.458333333333334,
-    "max_mag": 0.2316426233939136
+    "MWh": 234.5,
+    "days": 12.791666666666666,
+    "max_mag": 0.3515259347128513
    },
    "met": true,
    "cheapest_decisive_with_deep_gauge": {
@@ -1106,12 +1151,12 @@
     "max_mag": 0.46
    },
    "cheapest_decisive_any_schedule": {
-    "design": "hold72@600",
+    "design": "rate2@300+hold48@600",
     "mode": "occupancy",
     "monitoring": "gauge",
-    "MWh": 259.0,
-    "days": 10.083333333333334,
-    "max_mag": 0.35493365333281
+    "MWh": 234.5,
+    "days": 12.791666666666666,
+    "max_mag": 0.3515259347128513
    }
   }
  },
