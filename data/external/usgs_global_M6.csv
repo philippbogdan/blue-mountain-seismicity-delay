@@ -1,0 +1,22 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+2023-03-21T16:47:23.626Z,36.523,70.943,192,6.5,mww,164,12,2.512,0.94,us,us7000jln7,2023-10-22T17:50:55.996Z,"40 km SSE of Jurm, Afghanistan",earthquake,6.23,1.842,0.057,30,reviewed,us,us
+2023-03-22T16:00:34.663Z,-23.4224,-66.4954,228,6.4,mww,249,23,1.618,0.91,us,us7000jlxu,2024-10-09T17:29:43.182Z,"86 km WSW of El Aguilar, Argentina",earthquake,8.26,1.855,0.044,50,reviewed,us,us
+2023-03-27T22:19:15.181Z,-8.2322,158.9118,79,6.2,mww,324,11,1.576,0.72,us,us6000k05c,2023-06-03T22:06:02.040Z,"Solomon Islands",earthquake,7.93,1.845,0.043,52,reviewed,us,us
+2023-03-28T09:18:28.506Z,41.1434,142.8148,37,6,mww,272,44,0.908,0.51,us,us6000k09q,2024-10-09T16:50:09.134Z,"Hokkaido, Japan region",earthquake,5.51,1.932,0.053,34,reviewed,us,us
+2023-03-30T17:33:08.544Z,-35.6663,-73.4965,26,6.3,mww,151,52,1.107,0.56,us,us6000k0xf,2024-10-09T15:58:16.860Z,"105 km WSW of Constitución, Chile",earthquake,5.64,1.828,0.043,51,reviewed,us,us
+2023-04-02T18:04:11.261Z,-4.3229,143.1658,70,7,mww,154,20,3.044,0.83,us,us6000k1id,2025-09-08T02:34:44.175Z,"40 km ESE of Ambunti, Papua New Guinea",earthquake,7.73,1.874,0.047,44,reviewed,us,us
+2023-04-03T03:06:57.235Z,52.7227,158.4935,101,6.5,mww,323,12,0.316,0.72,us,us6000k1mn,2023-06-13T03:13:19.040Z,"23 km SSE of Vilyuchinsk, Russia",earthquake,7.61,1.611,0.063,24,reviewed,us,us
+2023-04-03T14:59:41.845Z,0.8388,98.835,84,6.1,mww,145,38,1.341,0.85,us,us6000k1qa,2024-10-09T15:34:59.556Z,"77 km SW of Padangsidempuan, Indonesia",earthquake,5.56,1.521,0.062,25,reviewed,us,us
+2023-04-04T12:54:31.503Z,13.7318,125.5376,10,6.2,mww,287,25,6.621,0.49,us,us6000k1x2,2023-06-13T03:13:03.040Z,"124 km E of Gigmoto, Philippines",earthquake,7.7,1.799,0.04,59,reviewed,us,us
+2023-04-04T22:18:12.640Z,7.5671,-82.3345,16,6.3,mww,320,33,1.286,0.61,us,us6000k20g,2024-10-09T15:09:39.096Z,"73 km S of Boca Chica, Panama",earthquake,5.61,1.679,0.039,63,reviewed,us,us
+2023-04-13T15:54:53.808Z,49.215,-129.6178,7,6,mww,228,54,1.719,0.65,us,us6000k42y,2024-01-18T19:46:49.152Z,"237 km SW of Port McNeill, Canada",earthquake,5.71,1.776,0.032,96,reviewed,us,us
+2023-04-14T09:55:45.220Z,-6.0413,112.0478,597,7,mww,203,31,1.885,0.71,us,us6000k49j,2023-06-27T06:16:48.251Z,"Java, Indonesia",earthquake,9.21,1.944,0.055,32,reviewed,us,us
+2023-04-18T04:31:42.284Z,-22.3188,179.4509,580,6.7,mww,155,19,4.737,0.69,us,us6000k587,2024-01-18T19:48:54.147Z,"south of the Fiji Islands",earthquake,8.72,1.897,0.06,27,reviewed,us,us
+2023-04-19T09:06:03.150Z,-5.9496,149.635,40,6.3,mww,178,36,3.065,0.98,us,us6000k5gu,2023-07-03T02:47:09.040Z,"30 km NNE of Kandrian, Papua New Guinea",earthquake,4.62,1.943,0.043,53,reviewed,us,us
+2023-04-22T08:23:42.033Z,-5.2611,125.585,4,6.2,mww,163,37,4.366,0.57,us,us6000k6ai,2023-07-03T02:46:42.040Z,"Banda Sea",earthquake,6.72,1.838,0.052,35,reviewed,us,us
+2023-04-24T00:41:55.894Z,-29.9574,-177.8386,46.755,7.1,mww,134,23,0.697,0.53,us,us6000k6mg,2023-07-11T01:45:22.040Z,"Kermadec Islands, New Zealand",earthquake,8.62,3.078,0.048,42,reviewed,us,us
+2023-04-24T20:00:57.265Z,-0.8082,98.5112,34,7.1,mww,131,34,2.297,0.7,us,us7000jvl3,2023-07-11T01:45:09.040Z,"171 km SSE of Teluk Dalam, Indonesia",earthquake,7.37,1.785,0.062,25,reviewed,us,us
+2023-04-28T03:13:44.419Z,-25.1471,178.5065,587.56,6,mb,113,23,5.17,0.94,us,us7000jwhc,2023-07-11T01:45:46.040Z,"south of the Fiji Islands",earthquake,9.6,3.635,0.023,676,reviewed,us,us
+2023-04-28T03:13:48.476Z,-25.1498,178.4274,563,6.6,mww,127,46,5.212,0.9,us,us7000jwhe,2023-07-11T01:45:44.040Z,"south of the Fiji Islands",earthquake,10.41,1.946,0.098,10,reviewed,us,us
+2023-05-05T05:42:04.365Z,37.5476,137.2994,10,6.2,mww,127,32,1.235,0.64,us,us6000k9mb,2023-08-01T03:01:15.072Z,"49 km NE of Anamizu, Japan",earthquake,8.07,1.833,0.061,26,reviewed,us,us
+2023-05-10T16:02:00.334Z,-15.6278,-174.4925,210,7.6,mww,380,15,3.744,0.7,us,us6000kawn,2023-07-22T19:16:37.040Z,"82 km WNW of Hihifo, Tonga",earthquake,7.37,1.841,0.055,32,reviewed,us,us
