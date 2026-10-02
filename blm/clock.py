@@ -82,8 +82,10 @@ def tide_profile(a=QUIET[0], b=QUIET[1], deg=6, offsets=np.arange(-12, 12.001, 0
     cn, *_ = np.linalg.lstsq(Xn, y, rcond=None)
     rss_none = float(np.sum((y - Xn @ cn) ** 2))
     dlogL_no_tide = float(0.5 * n_eff * np.log(rss_none / rss_best))
+    ub = np.interp(tg - off_best, thu, u)
+    tide_amp = float(abs(c_best) * 0.5 * (ub.max() - ub.min()))
     return dict(window_h=[a, b], legendre_deg=deg, barometer=baro, n=n, lag1_rho=rho,
-                dlogL_no_tide=dlogL_no_tide,
+                dlogL_no_tide=dlogL_no_tide, tide_amplitude_psi=tide_amp,
                 n_eff=n_eff, best_offset_h=float(off_best), tide_coef_psi_per_m=float(c_best),
                 boot_ci68=[float(np.percentile(boots, 16)), float(np.percentile(boots, 84))],
                 boot_ci95=[float(np.percentile(boots, 2.5)), float(np.percentile(boots, 97.5))],

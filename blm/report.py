@@ -101,6 +101,7 @@ MODEL_TEXT = {
     "paper:D=0.43(4piDt)": "paper's reading 2': published D=0.43 m2/s, paper's printed r=sqrt(4 pi D t)",
     "const": "constant rate (reference)",
     "exp+gamma": "transport (gamma kernel, shape free) + instantaneous exponential fault law",
+    "exprate+diffusion": "transport + exponential law + a pressurisation-rate term (the paper's two drivers, transported)",
     "dieterich:nucleation": "the faults' own delay in the nucleation regime (A sigma <= 50 psi), no transport",
 }
 
@@ -165,7 +166,8 @@ def findings(c):
     t = ck["tide"]
     th2 = ck["tide_second_half"]
     A("## 1. Clocks: one time base for gauge and catalogue (figs/fig_clock.png)\n")
-    A(f"- **Gauge = UTC, not PST.** In the 15-20 March quiet window the gauge carries the Earth tide (amplitude ~0.1 psi). "
+    A(f"- **Gauge = UTC, not PST.** In the 15-20 March quiet window the gauge carries the Earth tide (fitted tidal "
+      f"amplitude {f(t['tide_amplitude_psi'], 3)} psi, within ~0.1 psi of other slow variation). "
       f"Regressing it on the UTC solid-Earth tide (pysolid) and the UTC Winnemucca barometer, with the physical sign "
       f"(pressure falls when the ground dilates), gives a gauge offset of {f(t['best_offset_h'])} h from UTC, moving-block "
       f"bootstrap 95% {ci(t['boot_ci95'])} h (second half of the window: {f(th2['best_offset_h'])} h, {ci(th2['boot_ci95'])}). "
@@ -275,12 +277,19 @@ def findings_rest(c, sk, best, t_tr):
     A("- **Pressurisation rate.** The three slow ramps (restricted production, ~12 psi/h, ~105-140 psi) gave no detectable "
       "excess seismicity; the two fast ones (production halted, ~33 psi/h, 355-360 psi) gave hundreds of excess events, the "
       "rate peaking after the gauge peak. Ramp rate and amplitude rose together, and IV and V were loaded alike, so these "
-      "data cannot vary the rate at fixed amplitude: that is the first thing the proposed test does. The paper's suggestion "
-      "that the rate of pressurisation adds to the pressure is not borne out: its term is fitted to zero.")
+      "data cannot vary the rate at fixed amplitude: that is the first thing the proposed test does.")
+    kr = theta(c, "exprate+diffusion")
+    cr = c["cmp_tr"]["versus"].get("exprate+diffusion")
+    A(f"- **The paper's 'pressure and pressurisation rate'.** A pressurisation-rate term on the gauge pressure is fitted "
+      f"to zero (k = {f(theta(c, 'paper:p+dp/dt').get('k', float('nan')), 4)} events/psi); on the transported pressure it is "
+      f"k = {f(kr.get('k', float('nan')), 4)} events/psi and changes the held-out log-likelihood by "
+      f"{f(-cr['dll_total'], 1) if cr else 'n/a'} {ci([-cr['ci95'][1], -cr['ci95'][0]], 1) if cr else ''} against transport "
+      f"alone. Within these cycles the seismicity answers the pressure level the faults feel, not its rate of change.")
     dl = c["dist"]
     A(f"- **Distance.** Split by catalogue depth, deeper events lag more (section 6). Split by radial distance from 73-22 "
       f"there is no difference (LR = {f(dl['radial']['LR'], 2)}, p = {f(dl['radial']['p'], 2)}), as expected: 73-22 is a gauge "
-      f"well, not the source; the laterals run ~500 m either side of it.")
+      f"well at the laterals' midpoint, not the source; the stimulated volume runs ~450 m along the laterals either side "
+      f"of it (3000 ft long; Norbeck et al. 2023, Stanford Geothermal Workshop).")
     s4 = rs["step_tests"]["IV:shut-in"]
     A(f"- **A transient not explained.** In cycle IV the rate falls from {f(s4['rate_before'], 1)}/h in the 3 h before the shut-in "
       f"to {f(s4['rate_after'], 1)}/h in the 3 h after (p = {f(s4['p_rate'], 2)}; the restart then raises it from "
@@ -423,9 +432,17 @@ def findings_tail(c, sk, best, t_tr):
               f"{f(v['peak_excess']['value'], 1)} ± {f(v['peak_excess']['jackknife_se'], 1)} | "
               f"{f(v['excess_events']['value'], 0)} ± {f(v['excess_events']['jackknife_se'], 0)} |")
     A("")
-    A("- **The delay shortens, it does not lengthen.** Under every model that survives the held-out tests the peak "
-      "lag falls with slower ramps (the faults keep pace with a slowly rising gauge pressure); only the rejected "
-      "fault-delay model puts the peak at the gauge peak whatever the ramp.")
+    pl = c["pred"]
+    tm_ = [m for m in ["exp+diffusion+cascade", "exp+diffusion", "exp+lag", "dieterich+diffusion",
+                       "dieterich+diffusion(ta=178h)", "exp+diffusion+poro"] if m in pl]
+    falls = all(pl[m]["s=8"]["peak_lag_h"]["value"] < pl[m]["s=1"]["peak_lag_h"]["value"] for m in tm_)
+    A(f"- **The delay shortens, it does not lengthen.** Under every transport model "
+      f"({', '.join(tm_)}) the peak lag {'falls' if falls else 'does not grow'} with slower ramps (the faults keep "
+      f"pace with a slowly rising gauge pressure): from {f(min(pl[m]['s=1']['peak_lag_h']['value'] for m in tm_), 1)}-"
+      f"{f(max(pl[m]['s=1']['peak_lag_h']['value'] for m in tm_), 1)} h at the observed ramp to "
+      f"{f(min(pl[m]['s=8']['peak_lag_h']['value'] for m in tm_), 1)}-{f(max(pl[m]['s=8']['peak_lag_h']['value'] for m in tm_), 1)} h "
+      f"at x8. Without transport (cascades only, or the rejected fault-delay model) the peak sits at the gauge peak for "
+      f"every ramp. No explanation consistent with the cycles makes the delay grow.")
     A(f"- **Seismicity per cycle grows** with the time spent at high pressure: x2 slower adds {dv['x2_gain']} "
       f"({dv['x2_gain_br']} for the bracket), x8 slower multiplies the excess {dv['x8_fold']} fold for the same peak pressure. "
       f"Whether the peak rate keeps rising (instantaneous law) or saturates (bracket) is the one thing these data leave open; "
@@ -441,7 +458,9 @@ def findings_tail(c, sk, best, t_tr):
       "hypothetical archetype calibrated to a ~4 h onset on a cycle-IV ramp, its onset scaling as 1/(dp/dt)); (d) "
       "transport versus near-critical cascades; (e) the clock. Separations are expected log-likelihood ratios a test "
       "would deliver (the alternative given its best parameters for the truth's intensity), divided by the "
-      "over-dispersion measured here (phi = 2); > 5 is decisive.\n")
+      "over-dispersion measured here (phi = 2); > 5 is decisive. With a gauge at the seismic depth, pairs whose "
+      "explanations differ in their transport are settled by the pressure record itself (listed as 999); the fault-law "
+      "pair is then scored on the seismicity given the measured fault pressure.\n")
     if fr:
         ax = fr["axes"]
         bm = [d for d in fr["designs"] if d["design"] == "BM2023" and d["mode"] == "occupancy" and d["monitoring"] == "gauge"][0]
@@ -557,7 +576,9 @@ def report_md(c):
           f"{f(ax['skill']['paper_loco'], 4)} for the paper's best reading. Separation: worst key pair "
           f"{f(ax['separation']['BM2023_min'], 2)} for the 2023 cycles, {f(ax['separation']['best_min'], 1)} for the best proposed "
           f"design. Cost: {('cheapest decisive design ' + ax['cost']['cheapest_decisive']['design'] + ' (' + ax['cost']['cheapest_decisive']['monitoring'] + ', ' + f(ax['cost']['cheapest_decisive']['MWh'], 0) + ' MWh, ' + f(ax['cost']['cheapest_decisive']['days'], 1) + ' days)') if ax['cost']['cheapest_decisive'] else 'no decisive design'}. "
-          f"Weakest axis now: {fr['weakest'] or 'none unmet'}. Iterations are logged below.")
+          f"Weakest axis now: {fr['weakest'] or 'none unmet'}. Skill belongs to an explanation and separation and cost to "
+          f"a design, so the three-way non-dominated set is the best explanation paired with the design frontier "
+          f"(FINDINGS 8). Iterations are logged below.")
     chk = c["num"]["convergence_checks"]["value"] if c["num"] and "convergence_checks" in c["num"] else {}
     worst = max([v for k, v in chk.items() if k.startswith("profile_max")], default=float("nan"))
     A(f"- **Limits.** Met: FINDINGS 9 lists six, each physics or an unpublished quantity with its settling measurement. "

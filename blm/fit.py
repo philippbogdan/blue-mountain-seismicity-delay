@@ -46,6 +46,8 @@ MODELS = {
     "coulomb":             dict(transport="none", law="coulomb", free={"r0": 10, "k": 0.05}),
     "exp+diffusion+cascade": dict(transport="diffusion", law="exp", cascade=True,
                                 free={"r0": 8, "As": 200, "tau": 2, "K": 0.1, "c": 0.5, "pm": 1.3}),
+    "exprate+diffusion":   dict(transport="diffusion", law="exprate",
+                                free={"r0": 9, "As": 200, "tau": 2.3, "k": 0.05}),
     "paper:p+dp/dt":       dict(transport="none", law="exprate",
                                 free={"r0": 10, "As": 200, "k": 0.02}),
     "paper:D=0.43(4Dt)":   dict(transport="diffusion", law="exp",
