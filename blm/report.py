@@ -167,7 +167,7 @@ def findings(c):
     th2 = ck["tide_second_half"]
     A("## 1. Clocks: one time base for gauge and catalogue (figs/fig_clock.png)\n")
     A(f"- **Gauge = UTC, not PST.** In the 15-20 March quiet window the gauge carries the Earth tide (fitted tidal "
-      f"amplitude {f(t['tide_amplitude_psi'], 3)} psi, within ~0.1 psi of other slow variation). "
+      f"amplitude {f(t['tide_amplitude_psi'], 3)} psi, alongside ~0.1 psi of other slow variation). "
       f"Regressing it on the UTC solid-Earth tide (pysolid) and the UTC Winnemucca barometer, with the physical sign "
       f"(pressure falls when the ground dilates), gives a gauge offset of {f(t['best_offset_h'])} h from UTC, moving-block "
       f"bootstrap 95% {ci(t['boot_ci95'])} h (second half of the window: {f(th2['best_offset_h'])} h, {ci(th2['boot_ci95'])}). "
@@ -501,7 +501,8 @@ def findings_tail(c, sk, best, t_tr):
         A("- **Monte-Carlo check** (Cox-process catalogues with Blue Mountain's over-dispersion, both models refitted to "
           "each): " + "; ".join(f"{r['design']} {r['truth']}->{r['alt']}: expected {f(r['expected_dll_eff'], 1)} "
                                 f"(raw {f(r['expected_dll'], 1)}), simulated median {f(r['mc_median'], 1)} "
-                                f"[10-90% {f(r['mc_p10'], 1)}, {f(r['mc_p90'], 1)}], correct in {f(100 * r['mc_frac_correct'], 0)}%"
+                                f"[10-90% {f(r['mc_p10'], 1)}, {f(r['mc_p90'], 1)}], right model favoured in "
+                                f"{f(100 * r['mc_frac_correct'], 0)}% and by dll > 5 in {f(100 * r['mc_frac_gt5'], 0)}%"
                                 for r in mc) + ".")
     A("- **Monitoring that the schedule needs:** (1) every stream (DAS, gauges, SCADA rates) stamped from one "
       "GPS-disciplined UTC clock and labelled so; (2) multi-event detection (no one-event-per-file ceiling); (3) a pressure "
@@ -521,11 +522,13 @@ def findings_tail(c, sk, best, t_tr):
     A("3. **A finite fault response time on top of the transport** (physics not excited by 10-h ramps): t_a >= 178 h is "
       "all these cycles allow, and it decides whether very slow ramps saturate. Settled by the holds of section 8 with a "
       "gauge at the seismic depth.")
-    A("4. **Ramp rate at fixed amplitude** was never varied (operations, not analysis): the slow cycles were also small. "
-      "Settled by the rate series of section 8.")
-    A("5. **Five cycles** (the experiment): every interval above is a cycle-jackknife or block-bootstrap interval; cycle "
-      "V's shorter lag and the post-shut-in dip in cycle IV are not explained by one configuration and may be the "
-      "between-cycle variability those intervals carry.")
+    A("4. **Rate dependence at fixed amplitude** (physics the 2023 forcing did not excite): between cycles, rate and "
+      "amplitude rose together (PROBLEM.md: ramp rate was never varied on purpose); within the fast ramps the "
+      "pressurisation rate fell while the pressure rose and the seismicity followed the pressure (rate term fitted to "
+      "zero), but a direct test at fixed amplitude was never run. Settled by the rate series of section 8.")
+    A("5. **Between-cycle variability** (physics: seismicity is a stochastic process): cycle V's shorter lag and the "
+      "post-shut-in dip in cycle IV are not reproduced by one configuration; five cycles sample this variability, which "
+      "is why every interval above is a cycle-jackknife or block-bootstrap interval. Settled by more cycles (the test).")
     A("6. **The published distances** (unpublished method): how 'vertical distance from injection' was computed is not "
       "documented; the data show it is not a function of the catalogue location. Settled by the authors' code (the "
       "location script RT_DAS_2D_location.m listed in the OSF readme was not uploaded).")
@@ -583,13 +586,14 @@ def report_md(c):
     worst = max([v for k, v in chk.items() if k.startswith("profile_max")], default=float("nan"))
     A(f"- **Limits.** Met: FINDINGS 9 lists six, each physics or an unpublished quantity with its settling measurement. "
       f"None is a choice made here (kernel shape, outage threshold, depth classes and clock offset are varied and "
-      f"reported), an unconverged fit (no profile-likelihood point exceeds its model's best fit by more than "
-      f"{f(worst, 3)}; results/numbers.json convergence_checks) or an untried method (FINDINGS 2 and REPORT 'What failed').")
+      f"reported), an unconverged fit (the highest profile-likelihood point of every profiled parameter lies "
+      f"{f(abs(worst), 3)} {'below' if worst <= 0 else 'above'} its model's best fit; results/numbers.json "
+      f"convergence_checks) or an untried method (FINDINGS 2 and REPORT 'What failed').")
     A("- **Evidence.** One configuration per model for all cycles; intervals are cycle-jackknife or block-bootstrap; "
       "every number is read from results/*.json by the generator that wrote these documents.\n")
     A("## Frontier iterations (push the weakest)\n")
-    A("1. Skill was weakest (paper's readings only): 18 explanations built and scored out of sample; best held-out skill "
-      f"{f(sk[best]['loco'], 4)} against {f(sk['paper:p+dp/dt']['loco'], 4)}; met.")
+    A(f"1. Skill was weakest (paper's readings only): {len(sk) - 1} explanations built and scored out of sample; best "
+      f"held-out skill {f(sk[best]['loco'], 4)} against {f(sk['paper:p+dp/dt']['loco'], 4)}; met.")
     g1 = J("design_grid.json")
     v1 = ""
     if g1:
@@ -681,7 +685,7 @@ def complete_md(c):
             continue
         th = theta(c, mname)
         tau = th.get("tau")
-        D = (584 ** 2 / (4 * tau * 3600)) if tau and "shift" not in mname and "lag" not in mname else None
+        D = (584 ** 2 / (4 * tau * 3600)) if tau and not any(s in mname for s in ("shift", "lag", "gamma")) else None
         dd = cb.get(mname)
         A(f"| {mname} | {f(sk[mname]['loco'], 4)} | {'best' if dd is None else f(dd['dll_total'], 1) + ' ' + ci(dd['ci95'], 1)} | "
           f"{f(tau) if tau else '-'} | {f(D, 2) if D else '-'} |")
@@ -694,8 +698,8 @@ def complete_md(c):
     A("| event positions relative to the stimulated fractures (diffusivity) | unpublished quantity | 3-D locations or a gauge at the seismic depth |")
     A("| the catalogue's time zone (scale of tau) | unpublished quantity | raw DAS file name of any catalogued event |")
     A("| a finite fault response time (slow-ramp saturation) | physics not excited by 10-h ramps | holds with a gauge at the seismic depth |")
-    A("| ramp rate at fixed amplitude | the experiment as run | the rate series of FINDINGS 8 |")
-    A("| five cycles | the experiment as run | more cycles (the test) |")
+    A("| rate dependence at fixed amplitude | physics not excited by the cycles as run (rate and amplitude co-varied; PROBLEM.md: ramp rate never varied on purpose) | the rate series of FINDINGS 8 |")
+    A("| between-cycle variability (cycle V's lag, cycle IV's post-shut-in dip) | physics: seismicity is stochastic, and five cycles sample its variability | more cycles (the test) |")
     A("| how the published distances were computed | unpublished method | the authors' location code |")
     return "\n".join(L)
 
