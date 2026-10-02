@@ -72,7 +72,7 @@ def run(val="results/validate_shift+0_out1.json", model_names=None, out="results
     res = json.load(open(val))
     by = {(r["model"], r["scheme"]): r for r in res}
     model_names = model_names or ["exp+diffusion+cascade", "exp+diffusion", "exp+lag",
-                                  "dieterich+diffusion", "dieterich",
+                                  "dieterich+diffusion", "dieterich+diffusion(ta=178h)", "dieterich",
                                   "exp+diffusion+poro", "exp+diffusion+cascade", "exp+cascade",
                                   "coulomb+diffusion", "exp", "paper:D=0.43(4piDt)", "paper:p+dp/dt"]
     d = models.Data(t1=330.0)

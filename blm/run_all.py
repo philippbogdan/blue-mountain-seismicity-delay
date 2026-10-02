@@ -11,8 +11,8 @@ import subprocess
 import sys
 import time
 
-from . import (clock, compare, design, distance, front, numbers, ppc, predict, profile,
-               response, validate, xcorr, design_mc, frontier)
+from . import (clock, compare, design, design_mc, distance, figures, front, frontier, numbers,
+               ppc, predict, profile, report, response, validate, xcorr)
 
 R = "results"
 
@@ -61,6 +61,8 @@ def main(workers=6, skip_heavy=False):
     with open(f"{R}/manifest.json", "w") as fh:
         json.dump(dict(commit=head, dirty_tree_at_start=dirty, seconds=round(time.time() - t0),
                        python=sys.version.split()[0]), fh, indent=1)
+    step("figures", figures.run)
+    step("documents", report.run)
 
 
 if __name__ == "__main__":

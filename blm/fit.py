@@ -37,6 +37,8 @@ MODELS = {
                                 free={"r0": 10, "As": 150, "tau": 3}),
     "exp+cascade":         dict(transport="none", law="exp", cascade=True,
                                 free={"r0": 8, "As": 300, "K": 0.2, "c": 0.5, "pm": 1.3}),
+    "dieterich:nucleation": dict(transport="none", law="dieterich",
+                                free={"r0": 10, "ta": 30, "As": 30, "g0": 1}, bounds={"As": (1.0, 50.0)}),
     "dieterich+cascade":   dict(transport="none", law="dieterich", cascade=True,
                                 free={"r0": 8, "ta": 100, "As": 100, "g0": 1, "K": 0.2, "c": 0.5, "pm": 1.3}),
     "coulomb":             dict(transport="none", law="coulomb", free={"r0": 10, "k": 0.05}),
@@ -52,7 +54,7 @@ MODELS = {
 
 BOUNDS = {"r0": (1e-2, 1e3), "As": (1e-2, 1e5), "ta": (1e-1, 1e6), "g0": (1e-3, 1e3),
           "tau": (1e-2, 500.0), "k": (1e-5, 1e3), "K": (1e-4, 0.99), "c": (1e-3, 100.0),
-          "pm": (1.001, 5.0), "beta": (-5.0, 5.0)}
+          "pm": (1.001, 5.0), "beta": (-5.0, 5.0), "al": (0.0, 3.0)}
 
 
 def _names(spec):
@@ -80,14 +82,15 @@ def rate(name, d, th):
         return R
     R = models.rate_model(d, spec, th)
     if spec.get("cascade"):
-        R = R + models.omori_rate(d, th["K"], th["c"], th["pm"])
+        R = R + models.omori_rate(d, th["K"], th["c"], th["pm"], alpha=th.get("al", 0.0))
     return R
 
 
 def nll(z, name, d, mask):
     th = unpack(name, z)
+    sb = MODELS[name].get("bounds", {})
     for k in _names(MODELS[name]):
-        lo, hi = BOUNDS[k.split("_")[0]]
+        lo, hi = sb.get(k, BOUNDS[k.split("_")[0]])
         if not lo <= th[k] <= hi:
             return 1e12
     with np.errstate(all="ignore"):

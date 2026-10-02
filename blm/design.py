@@ -188,3 +188,96 @@ def run_grid(val="results/validate_shift+0_out1.json", out="results/design_grid.
     with open(out, "w") as fh:
         json.dump(rows, fh, indent=1)
     return rows
+
+
+# ------------------------------------------------------------------ design v2
+# Hypothetical 'schedule-controlled delay' site (not fitted: Dieterich nucleation
+# in its non-linear regime, no transport), calibrated so that a cycle-IV ramp
+# (33 psi/h) gives a ~4 h onset and a ~4x rate rise; its onset scales as 1/(dp/dt).
+ARCHETYPES = {"nucleation": ("dieterich", {"r0": 10.0, "ta": 11.5, "As": 95.0, "g0": 1.0})}
+B_VALUE, MC = 1.73, -0.8      # paper: unbounded b-value and magnitude of completeness
+
+
+def risk(n_events):
+    """Expected largest magnitude among n events above Mc (Gutenberg-Richter)."""
+    return MC + np.log10(max(n_events, 1.0)) / B_VALUE
+
+
+def designs_v2():
+    D = {}
+    rate = lambda r, dp, h=0, rest=36: dict(ramp_h=r, dp=dp, hold_h=h, rest_h=rest)
+    D["rate3@300"] = [rate(1, 300), rate(4, 300), rate(16, 300)]
+    D["rate3@300x2"] = [rate(1, 300), rate(4, 300), rate(16, 300), rate(16, 300), rate(4, 300), rate(1, 300)]
+    D["hold72@300"] = [rate(2, 300, 72, 72)]
+    D["hold72@450"] = [rate(2, 450, 72, 72)]
+    D["hold168@300"] = [rate(2, 300, 168, 96)]
+    D["hold72@450+rate3@300"] = [rate(1, 300), rate(4, 300), rate(16, 300), rate(2, 450, 72, 72)]
+    D["hold48@450+rate2@300"] = [rate(1, 300), rate(16, 300), rate(2, 450, 48, 72)]
+    D["amp3@6h"] = [rate(6, 150), rate(6, 300), rate(6, 450)]
+    return D
+
+
+def _resolve(name, thetas):
+    if name in ARCHETYPES:
+        base, th = ARCHETYPES[name]
+        return base, th
+    return name, thetas[name]
+
+
+def separation_v2(truth, alt, t, p, win, mode, monitoring, thetas):
+    """monitoring: 'gauge' (73-22 only) or 'deepgauge' (fault pressure measured:
+    the truth's transport is applied to the gauge pressure and both models are
+    then scored without transport on that measured fault pressure)."""
+    tname, tth = _resolve(truth, thetas)
+    aname, ath = _resolve(alt, thetas)
+    if monitoring == "deepgauge":
+        spec = fit.MODELS[tname]
+        tau = tth.get("tau", 0.0) if spec["transport"] != "none" else 0.0
+        pf = models.transport(p, spec["transport"], tau) if tau > 0 else p.copy()
+        strip = {"exp+diffusion": "exp", "exp+lag": "exp", "exp+diffusion+cascade": "exp+cascade",
+                 "dieterich+diffusion": "dieterich", "dieterich+diffusion(ta=178h)": "dieterich",
+                 "exp": "exp", "dieterich": "dieterich", "exp+cascade": "exp+cascade"}
+        tname2, aname2 = strip[tname], strip[aname]
+        tth2 = {k: v for k, v in tth.items() if k != "tau"}
+        ath2 = {k: v for k, v in ath.items() if k != "tau"}
+        if tname2 == "dieterich" and "ta" not in tth2:
+            tth2["ta"] = 1e6
+        if aname2 == "dieterich" and "ta" not in ath2:
+            ath2.update(ta=300.0, g0=1.0)
+        if aname2 == aname2 and aname2 == "exp" and "As" not in ath2:
+            ath2["As"] = 200.0
+        return separation(tname2, tth2, aname2, ath2, t, pf, win, mode)
+    return separation(tname, tth, aname, ath, t, p, win, mode)
+
+
+PAIRS_V2 = [("dieterich+diffusion(ta=178h)", "exp+diffusion"),   # fault law (finite t_a) on top of transport
+            ("exp+diffusion", "nucleation"), ("nucleation", "exp+diffusion"),   # site vs schedule
+            ("exp+diffusion", "exp+cascade"), ("exp+cascade", "exp+diffusion"),
+            ("exp+lag", "exp+diffusion")]                                        # transport kernel shape
+
+
+def _job_v2(args):
+    dname, truth, alt, mode, mon, thetas = args
+    if dname == "BM2023":
+        t, p, win, cost = blue_mountain()
+    else:
+        t, p, win, cost = schedule(designs_v2()[dname])
+    s = separation_v2(truth, alt, t, p, win, mode, mon, thetas)
+    return dict(design=dname, truth=truth, alt=alt, mode=mode, monitoring=mon, dll=s["dll"],
+                dll_eff=s["dll_eff"], n_events=s["n_events"], max_mag=risk(s["n_events"] * 0.3), cost=cost)
+
+
+def run_grid_v2(val="results/validate_shift+0_out1.json", out="results/design_grid_v2.json", workers=6):
+    from concurrent.futures import ProcessPoolExecutor
+    res = json.load(open(val))
+    by = {(r["model"], r["scheme"]): r for r in res}
+    names = {m for pr in PAIRS_V2 for m in pr if m not in ARCHETYPES}
+    thetas = {m: by[(m, "full")]["theta"] for m in names}
+    jobs = [(dn, tr, al, mode, mon, thetas) for dn in ["BM2023"] + list(designs_v2())
+            for tr, al in PAIRS_V2 for mode in ("occupancy", "counts") for mon in ("gauge", "deepgauge")
+            if not (mode == "occupancy" and mon == "deepgauge")]
+    with ProcessPoolExecutor(workers) as ex:
+        rows = list(ex.map(_job_v2, jobs))
+    with open(out, "w") as fh:
+        json.dump(rows, fh, indent=1)
+    return rows
