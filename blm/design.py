@@ -22,6 +22,7 @@ Cost: test duration (days) and deferred generation (MWh) at 3.5 MW (the
 doublet's peak gross output, paper section 1) for every curtailed hour.
 """
 import json
+import os
 
 import numpy as np
 from scipy import optimize
@@ -46,12 +47,15 @@ class Synth:
 
 
 def _decline_template():
-    """Normalised decline after a production restart (cycle V, the last cycle)."""
+    """Normalised decline after a production restart (shape of cycle V's decline, the
+    last cycle), clipped at -1: a test operator restores the pre-cycle level, whereas
+    the observed tail kept falling below it as the whole reservoir relaxed."""
     d = models.Data(t1=330.0)
     pk, v5 = 146.25, 135.75
     dp5 = np.interp(pk, d.t, d.p) - np.interp(v5, d.t, d.p)
     v = np.arange(0, 330.0 - pk, DT)
-    return v, (np.interp(pk + v, d.t, d.p) - np.interp(pk, d.t, d.p)) / dp5
+    dec = (np.interp(pk + v, d.t, d.p) - np.interp(pk, d.t, d.p)) / dp5
+    return v, np.maximum(dec, -1.0)
 
 
 _DEC = None
@@ -195,12 +199,27 @@ def run_grid(val="results/validate_shift+0_out1.json", out="results/design_grid.
 # in its non-linear regime, no transport), calibrated so that a cycle-IV ramp
 # (33 psi/h) gives a ~4 h onset and a ~4x rate rise; its onset scales as 1/(dp/dt).
 ARCHETYPES = {"nucleation": ("dieterich", {"r0": 10.0, "ta": 11.5, "As": 95.0, "g0": 1.0})}
-B_VALUE, MC = 1.73, -0.8      # paper: unbounded b-value and magnitude of completeness
+_SURV = None
 
 
 def risk(n_events):
-    """Expected largest magnitude among n events above Mc (Gutenberg-Richter)."""
-    return MC + np.log10(max(n_events, 1.0)) / B_VALUE
+    """Expected largest magnitude among n catalogued events, from the catalogue's own
+    magnitude survival function S(m) (N S(m) = 1); beyond the data S is extended with
+    the upper-tail b-value of events M >= -0.1 (Aki estimate, ~4.5; the distribution
+    steepens with magnitude, so a single Gutenberg-Richter b = 1.73 would overstate it)."""
+    global _SURV
+    from . import io
+    if _SURV is None:
+        m = np.sort(io.load_catalog().mag.to_numpy())
+        tail = m[m >= -0.1]
+        b_tail = np.log10(np.e) / (tail.mean() + 0.1)
+        _SURV = (m, b_tail, len(tail) / len(m))
+    m, b_tail, s_tail = _SURV
+    target = 1.0 / max(n_events, 1.0)
+    S = 1.0 - np.arange(len(m)) / len(m)
+    if target >= S[-1] and target >= s_tail:
+        return float(np.interp(-target, -S, m))
+    return float(-0.1 + np.log10(s_tail / target) / b_tail)
 
 
 def designs_v2():
@@ -214,6 +233,11 @@ def designs_v2():
     D["hold72@450+rate3@300"] = [rate(1, 300), rate(4, 300), rate(16, 300), rate(2, 450, 72, 72)]
     D["hold48@450+rate2@300"] = [rate(1, 300), rate(16, 300), rate(2, 450, 48, 72)]
     D["amp3@6h"] = [rate(6, 150), rate(6, 300), rate(6, 450)]
+    # iteration 3 (push cost): decisive without a new well, using a higher hold
+    D["hold72@600"] = [rate(2, 600, 72, 96)]
+    D["rate3@300+hold72@600"] = [rate(1, 300), rate(4, 300), rate(16, 300), rate(2, 600, 72, 96)]
+    D["rate2@300+hold48@600"] = [rate(1, 300), rate(16, 300), rate(2, 600, 48, 96)]
+    D["rate3@300x2+hold72@600"] = D["rate3@300x2"] + [rate(2, 600, 72, 96)]
     return D
 
 
@@ -224,30 +248,34 @@ def _resolve(name, thetas):
     return name, thetas[name]
 
 
-def separation_v2(truth, alt, t, p, win, mode, monitoring, thetas):
-    """monitoring: 'gauge' (73-22 only) or 'deepgauge' (fault pressure measured:
-    the truth's transport is applied to the gauge pressure and both models are
-    then scored without transport on that measured fault pressure)."""
+def prepare_v2(truth, alt, p, monitoring, thetas):
+    """Model names, parameters and the pressure each is driven by.  monitoring:
+    'gauge' (73-22 only) or 'deepgauge' (fault pressure measured: the truth's
+    transport is applied to the gauge pressure and both models are then scored
+    without transport on that measured fault pressure)."""
     tname, tth = _resolve(truth, thetas)
     aname, ath = _resolve(alt, thetas)
-    if monitoring == "deepgauge":
-        spec = fit.MODELS[tname]
-        tau = tth.get("tau", 0.0) if spec["transport"] != "none" else 0.0
-        pf = models.transport(p, spec["transport"], tau) if tau > 0 else p.copy()
-        strip = {"exp+diffusion": "exp", "exp+lag": "exp", "exp+diffusion+cascade": "exp+cascade",
-                 "dieterich+diffusion": "dieterich", "dieterich+diffusion(ta=178h)": "dieterich",
-                 "exp": "exp", "dieterich": "dieterich", "exp+cascade": "exp+cascade"}
-        tname2, aname2 = strip[tname], strip[aname]
-        tth2 = {k: v for k, v in tth.items() if k != "tau"}
-        ath2 = {k: v for k, v in ath.items() if k != "tau"}
-        if tname2 == "dieterich" and "ta" not in tth2:
-            tth2["ta"] = 1e6
-        if aname2 == "dieterich" and "ta" not in ath2:
-            ath2.update(ta=300.0, g0=1.0)
-        if aname2 == aname2 and aname2 == "exp" and "As" not in ath2:
-            ath2["As"] = 200.0
-        return separation(tname2, tth2, aname2, ath2, t, pf, win, mode)
-    return separation(tname, tth, aname, ath, t, p, win, mode)
+    if monitoring != "deepgauge":
+        return tname, tth, aname, ath, p
+    spec = fit.MODELS[tname]
+    tau = tth.get("tau", 0.0) if spec["transport"] != "none" else 0.0
+    pf = models.transport(p, spec["transport"], tau) if tau > 0 else p.copy()
+    strip = {"exp+diffusion": "exp", "exp+lag": "exp", "exp+diffusion+cascade": "exp+cascade",
+             "dieterich+diffusion": "dieterich", "dieterich+diffusion(ta=178h)": "dieterich",
+             "exp": "exp", "dieterich": "dieterich", "exp+cascade": "exp+cascade"}
+    tname2, aname2 = strip[tname], strip[aname]
+    tth2 = {k: v for k, v in tth.items() if k != "tau"}
+    ath2 = {k: v for k, v in ath.items() if k != "tau"}
+    if tname2 == "dieterich" and "ta" not in tth2:
+        tth2["ta"] = 1e6
+    if aname2 == "dieterich" and "ta" not in ath2:
+        ath2.update(ta=300.0, g0=1.0)
+    return tname2, tth2, aname2, ath2, pf
+
+
+def separation_v2(truth, alt, t, p, win, mode, monitoring, thetas):
+    tname, tth, aname, ath, pu = prepare_v2(truth, alt, p, monitoring, thetas)
+    return separation(tname, tth, aname, ath, t, pu, win, mode)
 
 
 PAIRS_V2 = [("dieterich+diffusion(ta=178h)", "exp+diffusion"),   # fault law (finite t_a) on top of transport
@@ -264,20 +292,26 @@ def _job_v2(args):
         t, p, win, cost = schedule(designs_v2()[dname])
     s = separation_v2(truth, alt, t, p, win, mode, mon, thetas)
     return dict(design=dname, truth=truth, alt=alt, mode=mode, monitoring=mon, dll=s["dll"],
-                dll_eff=s["dll_eff"], n_events=s["n_events"], max_mag=risk(s["n_events"] * 0.3), cost=cost)
+                dll_eff=s["dll_eff"], n_events=s["n_events"], max_mag=risk(s["n_events"]), cost=cost)
 
 
-def run_grid_v2(val="results/validate_shift+0_out1.json", out="results/design_grid_v2.json", workers=6):
+def run_grid_v2(val="results/validate_shift+0_out1.json", out="results/design_grid_v2.json", workers=6,
+                only=None):
+    """only: restrict to these design names and merge into an existing output file."""
     from concurrent.futures import ProcessPoolExecutor
     res = json.load(open(val))
     by = {(r["model"], r["scheme"]): r for r in res}
     names = {m for pr in PAIRS_V2 for m in pr if m not in ARCHETYPES}
     thetas = {m: by[(m, "full")]["theta"] for m in names}
-    jobs = [(dn, tr, al, mode, mon, thetas) for dn in ["BM2023"] + list(designs_v2())
+    dnames = only or (["BM2023"] + list(designs_v2()))
+    jobs = [(dn, tr, al, mode, mon, thetas) for dn in dnames
             for tr, al in PAIRS_V2 for mode in ("occupancy", "counts") for mon in ("gauge", "deepgauge")
             if not (mode == "occupancy" and mon == "deepgauge")]
     with ProcessPoolExecutor(workers) as ex:
         rows = list(ex.map(_job_v2, jobs))
+    if only and os.path.exists(out):
+        old = [r for r in json.load(open(out)) if r["design"] not in only]
+        rows = old + rows
     with open(out, "w") as fh:
         json.dump(rows, fh, indent=1)
     return rows

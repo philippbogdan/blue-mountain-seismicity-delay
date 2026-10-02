@@ -54,7 +54,9 @@ def main(workers=6, skip_heavy=False):
     step("ppc", ppc.run, val=val, out=f"{R}/ppc.json")
     step("predict", predict.run, val=val, out=f"{R}/predict.json")
     if not skip_heavy:
-        step("design grid", design.run_grid, val=val, out=f"{R}/design_grid.json", workers=workers)
+        step("design grid v1 (first frontier iteration)", design.run_grid, val=val, out=f"{R}/design_grid.json",
+             workers=workers)
+        step("design grid v2", design.run_grid_v2, val=val, out=f"{R}/design_grid_v2.json", workers=workers)
         step("design Monte Carlo check", design_mc.run, val=val, out=f"{R}/design_mc.json", workers=workers)
     step("frontier", frontier.run, out=f"{R}/frontier.json")
     step("numbers", numbers.run, out=f"{R}/numbers.json")

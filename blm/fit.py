@@ -33,6 +33,8 @@ MODELS = {
                                 free={"r0": 10, "k": 5, "tau": 30}),
     "exp+diffusion+poro":  dict(transport="diffusion", law="exp",
                                 free={"r0": 10, "As": 150, "tau": 3}, linear={"beta": 0.0}),
+    "exp+gamma":           dict(transport="gamma", law="exp",
+                                free={"r0": 10, "As": 200, "tau": 4, "kg": 2}),
     "exp+shift":           dict(transport="shift", law="exp",
                                 free={"r0": 10, "As": 150, "tau": 3}),
     "exp+cascade":         dict(transport="none", law="exp", cascade=True,
@@ -54,7 +56,7 @@ MODELS = {
 
 BOUNDS = {"r0": (1e-2, 1e3), "As": (1e-2, 1e5), "ta": (1e-1, 1e6), "g0": (1e-3, 1e3),
           "tau": (1e-2, 500.0), "k": (1e-5, 1e3), "K": (1e-4, 0.99), "c": (1e-3, 100.0),
-          "pm": (1.001, 5.0), "beta": (-5.0, 5.0), "al": (0.0, 3.0)}
+          "pm": (1.001, 5.0), "beta": (-5.0, 5.0), "al": (0.0, 3.0), "kg": (0.05, 50.0)}
 
 
 def _names(spec):

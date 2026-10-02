@@ -199,23 +199,31 @@ def fig_predict():
 def fig_design():
     fr = _j("frontier.json")
     ds = fr["designs"]
-    fig, ax = plt.subplots(1, 2, figsize=(13, 5))
+    front_keys = [tuple(x) for x in fr["frontier"]]
+    fig, ax = plt.subplots(1, 2, figsize=(14, 5.5))
+    mk = {"gauge": "s", "deepgauge": "o"}
     for dd in ds:
-        mk = "o" if dd["mode"] == "counts" else "s"
-        on = (dd["design"], dd["mode"]) in [tuple(x) for x in fr["frontier"]]
-        ax[0].scatter(dd["cost"]["deferred_MWh"], max(dd["min_sep"], 1e-2), marker=mk,
-                      color="r" if on else "gray", s=40)
-        ax[0].annotate(f"{dd['design']}/{dd['mode'][:3]}", (dd["cost"]["deferred_MWh"], max(dd["min_sep"], 1e-2)), fontsize=6)
+        key = (dd["design"], dd["mode"], dd["monitoring"])
+        on = key in front_keys
+        y = min(max(dd["min_sep"], 1e-2), 999)
+        ax[0].scatter(dd["cost"]["deferred_MWh"], y, marker=mk[dd["monitoring"]],
+                      facecolors="r" if on else "none", edgecolors="r" if on else "gray", s=45)
+        if on or dd["design"] == "BM2023":
+            ax[0].annotate(f"{dd['design']}/{dd['mode'][:3]}/{dd['monitoring'][:4]}",
+                           (dd["cost"]["deferred_MWh"], y), fontsize=6)
     ax[0].axhline(5, color="k", ls="--", lw=0.8)
+    ax[0].axvline(fr["axes"]["cost"]["target"]["MWh"], color="b", ls=":", lw=0.8)
     ax[0].set_yscale("log")
-    ax[0].set_xlabel("deferred generation (MWh)")
-    ax[0].set_ylabel("separation of the hardest explanation pair (E[dll]/phi)")
-    best = max((x for x in ds if x["design"] != "BM2023"), key=lambda x: x["min_sep"])
-    t, p, win, cost = design.schedule(design.designs()[best["design"]])
+    ax[0].set_xlabel("deferred generation (MWh); dotted: cost target")
+    ax[0].set_ylabel("worst key-pair separation E[dll]/phi (>5 decisive)")
+    ax[0].set_title("squares: 73-22 gauge only; circles: + gauge at seismic depth; red: frontier", fontsize=8)
+    cd = fr["axes"]["cost"]["cheapest_decisive"]
+    name = cd["design"] if cd else max((x for x in ds if x["design"] != "BM2023"), key=lambda x: x["min_sep"])["design"]
+    t, p, win, cost = design.schedule(design.designs_v2()[name])
     ax[1].plot(t / 24, p, "k")
-    ax[1].set_xlabel("days")
-    ax[1].set_ylabel("gauge psig (prescribed)")
-    ax[1].set_title(f"schedule '{best['design']}'", fontsize=9)
+    ax[1].set_xlabel("days from the start of the test")
+    ax[1].set_ylabel("prescribed 73-22 pressure (psig)")
+    ax[1].set_title(f"recommended schedule '{name}'", fontsize=9)
     plt.tight_layout()
     plt.savefig(f"{F}/fig_design.png", dpi=110)
     plt.close()

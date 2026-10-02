@@ -104,9 +104,10 @@ def analyse(classes, name, d=None):
     LR = 2 * (ll1 - ll0)
     p = float(stats.chi2.sf(LR, K - 1))
     taus = np.exp(x1[K + 1:])
-    grid = np.exp(np.linspace(np.log(0.1), np.log(40), 41))
+    grid = np.exp(np.linspace(np.log(0.2), np.log(20), 61))     # 8% steps
     cis = {}
     c = io.load_catalog()
+    c = c[(c.th >= models.WIN[0]) & (c.th < models.WIN[1])]      # events in the analysis window
     for k, (cname, f) in enumerate(classes.items()):
         prof = profile_tau(classes, x1, d, mask, k, grid)
         okp = prof >= prof.max() - 1.92

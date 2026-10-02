@@ -1,0 +1,1122 @@
+[
+ {
+  "design": "BM2023",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 3.3523789273385773,
+  "dll_eff": 1.6761894636692887,
+  "n_events": 2840.1465312182563,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 3.9322871938584285,
+  "dll_eff": 1.9661435969292143,
+  "n_events": 2840.1465312182563,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 42.88873134186997,
+  "dll_eff": 21.444365670934985,
+  "n_events": 2809.709503380297,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 52.83919750478162,
+  "dll_eff": 26.41959875239081,
+  "n_events": 2809.709503380297,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 9.93199083438958,
+  "dll_eff": 4.96599541719479,
+  "n_events": 2693.2791714326654,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 11.365055901566848,
+  "dll_eff": 5.682527950783424,
+  "n_events": 2693.2791714326654,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 1.7924379033156583,
+  "dll_eff": 0.8962189516578292,
+  "n_events": 2809.709503380297,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 2.2273704156677923,
+  "dll_eff": 1.1136852078338961,
+  "n_events": 2809.709503380297,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 18.45665321310753,
+  "dll_eff": 9.228326606553765,
+  "n_events": 4622.400328302218,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 24.722366339715336,
+  "dll_eff": 12.361183169857668,
+  "n_events": 4622.400328302218,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 0.8061274066462829,
+  "dll_eff": 0.40306370332314145,
+  "n_events": 1217.6665370988655,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 0.851727011577168,
+  "dll_eff": 0.425863505788584,
+  "n_events": 1217.6665370988655,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 37.146478496805685,
+  "dll_eff": 18.573239248402842,
+  "n_events": 1123.5327596058669,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 39.302588599146475,
+  "dll_eff": 19.651294299573237,
+  "n_events": 1123.5327596058669,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 3.2632152008854973,
+  "dll_eff": 1.6316076004427487,
+  "n_events": 1527.1285762998832,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 3.4958189966091595,
+  "dll_eff": 1.7479094983045798,
+  "n_events": 1527.1285762998832,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 37.25017246600419,
+  "dll_eff": 18.625086233002094,
+  "n_events": 1123.5327596058669,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 39.41153773393353,
+  "dll_eff": 19.705768866966764,
+  "n_events": 1123.5327596058669,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 3.803493613806495,
+  "dll_eff": 1.9017468069032475,
+  "n_events": 3069.730716626752,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3x2",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 4.126220682679559,
+  "dll_eff": 2.0631103413397796,
+  "n_events": 3069.730716626752,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 2.016226370096774,
+  "dll_eff": 1.008113185048387,
+  "n_events": 2612.730411837832,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 2.194664187937633,
+  "dll_eff": 1.0973320939688165,
+  "n_events": 2612.730411837832,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 72.68122054683136,
+  "dll_eff": 36.34061027341568,
+  "n_events": 3049.2157215688926,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 83.35286806852127,
+  "dll_eff": 41.67643403426064,
+  "n_events": 3049.2157215688926,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 4.538693842753673,
+  "dll_eff": 2.2693469213768367,
+  "n_events": 2610.7142685886492,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 5.02919619090062,
+  "dll_eff": 2.51459809545031,
+  "n_events": 2610.7142685886492,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 3.996692592116233,
+  "dll_eff": 1.9983462960581164,
+  "n_events": 3049.2157215688926,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 3.055319979563137,
+  "dll_eff": 1.5276599897815686,
+  "n_events": 3049.2157215688926,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 2.8277095230459963,
+  "dll_eff": 1.4138547615229982,
+  "n_events": 5545.089442802159,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 3.5814745845364087,
+  "dll_eff": 1.7907372922682043,
+  "n_events": 5545.089442802159,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 1.4588926704809637,
+  "dll_eff": 0.7294463352404819,
+  "n_events": 1277.1057411004717,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 1.510070800948597,
+  "dll_eff": 0.7550354004742985,
+  "n_events": 1277.1057411004717,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 44.639269059705384,
+  "dll_eff": 22.319634529852692,
+  "n_events": 1145.767145515193,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 47.09893096113274,
+  "dll_eff": 23.54946548056637,
+  "n_events": 1145.767145515193,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 5.536070897219361,
+  "dll_eff": 2.7680354486096803,
+  "n_events": 1791.3757179266681,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 5.836094815460456,
+  "dll_eff": 2.918047407730228,
+  "n_events": 1791.3757179266681,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 44.8954290379902,
+  "dll_eff": 22.4477145189951,
+  "n_events": 1145.767145515193,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 47.34158884960925,
+  "dll_eff": 23.670794424804626,
+  "n_events": 1145.767145515193,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 11.731293938906674,
+  "dll_eff": 5.865646969453337,
+  "n_events": 3570.8105686208214,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3x2+hold72",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 12.386440349164332,
+  "dll_eff": 6.193220174582166,
+  "n_events": 3570.8105686208214,
+  "cost": {
+   "days": 19.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 4.7328704146812015,
+  "dll_eff": 2.3664352073406008,
+  "n_events": 1626.2186704732555,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 5.112664736298029,
+  "dll_eff": 2.5563323681490147,
+  "n_events": 1626.2186704732555,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 38.539804561682104,
+  "dll_eff": 19.269902280841052,
+  "n_events": 1501.1091243497133,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 40.93391165919729,
+  "dll_eff": 20.466955829598646,
+  "n_events": 1501.1091243497133,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 8.795290643552107,
+  "dll_eff": 4.397645321776054,
+  "n_events": 1856.6053578330984,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 9.496729833572317,
+  "dll_eff": 4.748364916786159,
+  "n_events": 1856.6053578330984,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 0.8138550757503253,
+  "dll_eff": 0.40692753787516267,
+  "n_events": 1501.1091243497133,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 0.8597488767027244,
+  "dll_eff": 0.4298744383513622,
+  "n_events": 1501.1091243497133,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 3.6103256936903563,
+  "dll_eff": 1.8051628468451781,
+  "n_events": 3435.0064900986654,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2+hold48",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 4.078828455722032,
+  "dll_eff": 2.039414227861016,
+  "n_events": 3435.0064900986654,
+  "cost": {
+   "days": 10.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 1.0232704687714431,
+  "dll_eff": 0.5116352343857216,
+  "n_events": 1411.5231827087641,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 1.1075786362725921,
+  "dll_eff": 0.5537893181362961,
+  "n_events": 1411.5231827087641,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 39.9304339245482,
+  "dll_eff": 19.9652169622741,
+  "n_events": 1510.5732793709985,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 45.20767701770956,
+  "dll_eff": 22.60383850885478,
+  "n_events": 1510.5732793709985,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 1.8904109071345374,
+  "dll_eff": 0.9452054535672687,
+  "n_events": 1395.3030245225434,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 2.0393159285035836,
+  "dll_eff": 1.0196579642517918,
+  "n_events": 1395.3030245225434,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 0.9609625475541179,
+  "dll_eff": 0.48048127377705896,
+  "n_events": 1510.5732793709985,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 1.081413425941264,
+  "dll_eff": 0.540706712970632,
+  "n_events": 1510.5732793709985,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 0.6418875820863832,
+  "dll_eff": 0.3209437910431916,
+  "n_events": 2821.0755609131515,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "hold24",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 0.7688095040057306,
+  "dll_eff": 0.3844047520028653,
+  "n_events": 2821.0755609131515,
+  "cost": {
+   "days": 6.083333333333333,
+   "deferred_MWh": 91.0,
+   "curtailed_h": 26.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 1.5206563203923906,
+  "dll_eff": 0.7603281601961953,
+  "n_events": 1285.3463225824541,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 1.6472253292058667,
+  "dll_eff": 0.8236126646029334,
+  "n_events": 1285.3463225824541,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 32.39223771405614,
+  "dll_eff": 16.19611885702807,
+  "n_events": 1235.957995452434,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 33.844400531390875,
+  "dll_eff": 16.922200265695437,
+  "n_events": 1235.957995452434,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 4.067744435496024,
+  "dll_eff": 2.033872217748012,
+  "n_events": 1397.316796180386,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 4.524033725785557,
+  "dll_eff": 2.2620168628927786,
+  "n_events": 1397.316796180386,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 0.9566891584636323,
+  "dll_eff": 0.47834457923181617,
+  "n_events": 1235.957995452434,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 32.71835571779047,
+  "dll_eff": 16.359177858895237,
+  "n_events": 1235.957995452434,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 3.6544861461170512,
+  "dll_eff": 1.8272430730585256,
+  "n_events": 2674.865714474613,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 4.216621626058441,
+  "dll_eff": 2.1083108130292203,
+  "n_events": 2674.865714474613,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 0.24908041924072677,
+  "dll_eff": 0.12454020962036338,
+  "n_events": 1161.6773572266627,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 0.2692242941548102,
+  "dll_eff": 0.1346121470774051,
+  "n_events": 1161.6773572266627,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "occupancy",
+  "dll": 44.56535816588348,
+  "dll_eff": 22.28267908294174,
+  "n_events": 1203.442365220043,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "exp+diffusion",
+  "alt": "dieterich",
+  "mode": "counts",
+  "dll": 48.56448504230593,
+  "dll_eff": 24.282242521152966,
+  "n_events": 1203.442365220043,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 1.26433061757416,
+  "dll_eff": 0.63216530878708,
+  "n_events": 1165.9808713249213,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "dieterich",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 1.3779137694218662,
+  "dll_eff": 0.6889568847109331,
+  "n_events": 1165.9808713249213,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "dll": 44.64255941547708,
+  "dll_eff": 22.32127970773854,
+  "n_events": 1203.442365220043,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "dll": 48.63360326077236,
+  "dll_eff": 24.31680163038618,
+  "n_events": 1203.442365220043,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "dll": 4.701133737748023,
+  "dll_eff": 2.3505668688740116,
+  "n_events": 2658.494916665977,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ },
+ {
+  "design": "bm-like5",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "dll": 5.47803439647123,
+  "dll_eff": 2.739017198235615,
+  "n_events": 2658.494916665977,
+  "cost": {
+   "days": 8.0,
+   "deferred_MWh": 183.75,
+   "curtailed_h": 52.5
+  }
+ }
+]

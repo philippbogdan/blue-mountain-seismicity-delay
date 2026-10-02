@@ -80,41 +80,43 @@ def fit_counts(name, th0, data, t, p, win, mode):
 
 
 def _case(args):
-    dname, truth, alt, mode, thetas, n_rep, seed = args
+    dname, truth, alt, mode, mon, thetas, n_rep, seed = args
     if dname == "BM2023":
         t, p, win, cost = design.blue_mountain()
     else:
-        t, p, win, cost = design.schedule(design.designs()[dname])
-    lam = design.intensity(truth, thetas[truth], t, p)
+        t, p, win, cost = design.schedule(design.designs_v2()[dname])
+    tname, tth, aname, ath, pu = design.prepare_v2(truth, alt, p, mon, thetas)
+    lam = design.intensity(tname, tth, t, pu)
     sigma, phi = calibrate_sigma(lam[win])
-    exp_sep = design.separation(truth, thetas[truth], alt, thetas[alt], t, p, win, mode)
+    exp_sep = design.separation(tname, tth, aname, ath, t, pu, win, mode)
     rng = np.random.default_rng(seed)
     dlls = []
     for _ in range(n_rep):
         x = np.zeros(len(t), int)
         x[win] = simulate(lam[win], mode, sigma, rng)
-        lt = fit_counts(truth, thetas[truth], x, t, p, win, mode)
-        la = fit_counts(alt, exp_sep["theta_alt"], x, t, p, win, mode)
+        lt = fit_counts(tname, tth, x, t, pu, win, mode)
+        la = fit_counts(aname, exp_sep["theta_alt"], x, t, pu, win, mode)
         dlls.append(lt - la)
     dlls = np.array(dlls)
-    return dict(design=dname, truth=truth, alt=alt, mode=mode, sigma=sigma, phi_sim=phi,
+    return dict(design=dname, truth=truth, alt=alt, mode=mode, monitoring=mon, sigma=sigma, phi_sim=phi,
                 expected_dll=exp_sep["dll"], expected_dll_eff=exp_sep["dll_eff"],
                 mc_median=float(np.median(dlls)), mc_p10=float(np.percentile(dlls, 10)),
                 mc_p90=float(np.percentile(dlls, 90)), mc_frac_gt5=float(np.mean(dlls > 5)),
                 mc_frac_correct=float(np.mean(dlls > 0)))
 
 
-CASES = [("BM2023", "exp+diffusion", "dieterich", "occupancy"),
-         ("hold72", "dieterich+diffusion(ta=178h)", "exp+diffusion", "counts"),
-         ("rate3x2+hold72", "dieterich+diffusion(ta=178h)", "exp+diffusion", "counts")]
+CASES = [("BM2023", "exp+diffusion", "dieterich", "occupancy", "gauge"),        # calibration against the data
+         ("hold72@450", "dieterich+diffusion(ta=178h)", "exp+diffusion", "counts", "deepgauge"),
+         ("hold72@450", "dieterich+diffusion(ta=178h)", "exp+diffusion", "counts", "gauge"),
+         ("rate3@300", "nucleation", "exp+diffusion", "counts", "gauge")]
 
 
-def run(val="results/validate_shift+0_out1.json", out="results/design_mc.json", n_rep=24, workers=3):
+def run(val="results/validate_shift+0_out1.json", out="results/design_mc.json", n_rep=24, workers=4):
     res = json.load(open(val))
     by = {(r["model"], r["scheme"]): r for r in res}
-    names = {m for c in CASES for m in c[1:3]}
+    names = {m for c in CASES for m in c[1:3] if m not in design.ARCHETYPES}
     thetas = {m: by[(m, "full")]["theta"] for m in names}
-    jobs = [(d, tr, al, mo, thetas, n_rep, i) for i, (d, tr, al, mo) in enumerate(CASES)]
+    jobs = [(d, tr, al, mo, mon, thetas, n_rep, i) for i, (d, tr, al, mo, mon) in enumerate(CASES)]
     with ProcessPoolExecutor(workers) as ex:
         rows = list(ex.map(_case, jobs))
     with open(out, "w") as fh:

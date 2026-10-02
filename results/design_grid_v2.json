@@ -1,0 +1,3746 @@
+[
+ {
+  "design": "BM2023",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 3.3523789273385773,
+  "dll_eff": 1.6761894636692887,
+  "n_events": 2840.1465312182563,
+  "max_mag": 0.8939086715776461,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 3.9322871938584285,
+  "dll_eff": 1.9661435969292143,
+  "n_events": 2840.1465312182563,
+  "max_mag": 0.8939086715776461,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 10.01082303151452,
+  "dll_eff": 5.00541151575726,
+  "n_events": 2840.1465312182563,
+  "max_mag": 0.8939086715776461,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 70.93666490348096,
+  "dll_eff": 35.46833245174048,
+  "n_events": 2809.709503380297,
+  "max_mag": 0.8912038584524486,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 53.09560995401807,
+  "dll_eff": 26.547804977009037,
+  "n_events": 2809.709503380297,
+  "max_mag": 0.8912038584524486,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.7600181056186557e-06,
+  "dll_eff": 1.3800090528093278e-06,
+  "n_events": 2809.709503380297,
+  "max_mag": 0.8912038584524486,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 477.6776964506421,
+  "dll_eff": 238.83884822532104,
+  "n_events": 1911.7843532216286,
+  "max_mag": 0.7945434436832495,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 528.131716661288,
+  "dll_eff": 264.065858330644,
+  "n_events": 1911.7843532216286,
+  "max_mag": 0.7945434436832495,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 505.3209671969089,
+  "dll_eff": 252.66048359845445,
+  "n_events": 1911.7843532216286,
+  "max_mag": 0.7945434436832495,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 1.7924379033156583,
+  "dll_eff": 0.8962189516578292,
+  "n_events": 2809.709503380297,
+  "max_mag": 0.8912038584524486,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 2.2273704156677923,
+  "dll_eff": 1.1136852078338961,
+  "n_events": 2809.709503380297,
+  "max_mag": 0.8912038584524486,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.001177664677015855,
+  "dll_eff": 0.0005888323385079275,
+  "n_events": 2809.709503380297,
+  "max_mag": 0.8912038584524486,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 18.45665321310753,
+  "dll_eff": 9.228326606553765,
+  "n_events": 4622.400328302218,
+  "max_mag": 1.0161785029278596,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 24.722366339715336,
+  "dll_eff": 12.361183169857668,
+  "n_events": 4622.400328302218,
+  "max_mag": 1.0161785029278596,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 108.67755320181914,
+  "dll_eff": 54.33877660090957,
+  "n_events": 4622.400328302218,
+  "max_mag": 1.0161785029278596,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 2.6104811214263464,
+  "dll_eff": 1.3052405607131732,
+  "n_events": 2836.604045950155,
+  "max_mag": 0.8935953599590001,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 3.052338905848046,
+  "dll_eff": 1.526169452924023,
+  "n_events": 2836.604045950155,
+  "max_mag": 0.8935953599590001,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "BM2023",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.1849245968041942e-07,
+  "dll_eff": 1.0924622984020971e-07,
+  "n_events": 2836.604045950155,
+  "max_mag": 0.8935953599590001,
+  "cost": {
+   "days": 7.083333333333333,
+   "deferred_MWh": 93.20500000000001,
+   "curtailed_h": 53.260000000000005
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.638818290497511,
+  "dll_eff": 0.3194091452487555,
+  "n_events": 1107.7865411354937,
+  "max_mag": 0.6575591555926612,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 0.6802122082699498,
+  "dll_eff": 0.3401061041349749,
+  "n_events": 1107.7865411354937,
+  "max_mag": 0.6575591555926612,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.7319766781674844,
+  "dll_eff": 0.3659883390837422,
+  "n_events": 1107.7865411354937,
+  "max_mag": 0.6575591555926612,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 25.04697025202904,
+  "dll_eff": 12.52348512601452,
+  "n_events": 1056.8476493727496,
+  "max_mag": 0.6457419887330258,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 28.887506625655533,
+  "dll_eff": 14.443753312827766,
+  "n_events": 1056.8476493727496,
+  "max_mag": 0.6457419887330258,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.0281277102185413e-08,
+  "dll_eff": 1.0140638551092707e-08,
+  "n_events": 1056.8476493727496,
+  "max_mag": 0.6457419887330258,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 352.74303824535536,
+  "dll_eff": 176.37151912267768,
+  "n_events": 1346.7943328469617,
+  "max_mag": 0.7066026213752437,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 455.8602007666386,
+  "dll_eff": 227.9301003833193,
+  "n_events": 1346.7943328469617,
+  "max_mag": 0.7066026213752437,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 433.5786652006291,
+  "dll_eff": 216.78933260031454,
+  "n_events": 1346.7943328469617,
+  "max_mag": 0.7066026213752437,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.6257551143353339,
+  "dll_eff": 0.31287755716766696,
+  "n_events": 1056.8476493727496,
+  "max_mag": 0.6457419887330258,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 0.6424833549276627,
+  "dll_eff": 0.32124167746383137,
+  "n_events": 1056.8476493727496,
+  "max_mag": 0.6457419887330258,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 7.146079269659822e-05,
+  "dll_eff": 3.573039634829911e-05,
+  "n_events": 1056.8476493727496,
+  "max_mag": 0.6457419887330258,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.6720487837064866,
+  "dll_eff": 0.3360243918532433,
+  "n_events": 2401.0652038209973,
+  "max_mag": 0.8517486755648505,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 0.7581647088345562,
+  "dll_eff": 0.3790823544172781,
+  "n_events": 2401.0652038209973,
+  "max_mag": 0.8517486755648505,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.8112229362423022,
+  "dll_eff": 1.4056114681211511,
+  "n_events": 2401.0652038209973,
+  "max_mag": 0.8517486755648505,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.40066876101536764,
+  "dll_eff": 0.20033438050768382,
+  "n_events": 1067.0474535309106,
+  "max_mag": 0.6481531725057821,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 0.4232856412363617,
+  "dll_eff": 0.21164282061818085,
+  "n_events": 1067.0474535309106,
+  "max_mag": 0.6481531725057821,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.308797775185667e-07,
+  "dll_eff": 1.1543988875928335e-07,
+  "n_events": 1067.0474535309106,
+  "max_mag": 0.6481531725057821,
+  "cost": {
+   "days": 8.375,
+   "deferred_MWh": 73.5,
+   "curtailed_h": 21.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.8061274066462829,
+  "dll_eff": 0.40306370332314145,
+  "n_events": 1217.6665370988655,
+  "max_mag": 0.6813003618497708,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 0.851727011577168,
+  "dll_eff": 0.425863505788584,
+  "n_events": 1217.6665370988655,
+  "max_mag": 0.6813003618497708,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.9151752406924061,
+  "dll_eff": 0.45758762034620304,
+  "n_events": 1217.6665370988655,
+  "max_mag": 0.6813003618497708,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 36.42881818037631,
+  "dll_eff": 18.214409090188155,
+  "n_events": 1123.5327596058669,
+  "max_mag": 0.6611023090623525,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 39.301381258898346,
+  "dll_eff": 19.650690629449173,
+  "n_events": 1123.5327596058669,
+  "max_mag": 0.6611023090623525,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 4.3099134927615523e-08,
+  "dll_eff": 2.1549567463807762e-08,
+  "n_events": 1123.5327596058669,
+  "max_mag": 0.6611023090623525,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 638.356019534458,
+  "dll_eff": 319.178009767229,
+  "n_events": 1922.1960514331247,
+  "max_mag": 0.7959068991385616,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 803.696906847952,
+  "dll_eff": 401.848453423976,
+  "n_events": 1922.1960514331247,
+  "max_mag": 0.7959068991385616,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 786.4801749873259,
+  "dll_eff": 393.24008749366294,
+  "n_events": 1922.1960514331247,
+  "max_mag": 0.7959068991385616,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 37.25017246600419,
+  "dll_eff": 18.625086233002094,
+  "n_events": 1123.5327596058669,
+  "max_mag": 0.6611023090623525,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 39.41153773393353,
+  "dll_eff": 19.705768866966764,
+  "n_events": 1123.5327596058669,
+  "max_mag": 0.6611023090623525,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.007171028397806367,
+  "dll_eff": 0.0035855141989031836,
+  "n_events": 1123.5327596058669,
+  "max_mag": 0.6611023090623525,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 3.803493613806495,
+  "dll_eff": 1.9017468069032475,
+  "n_events": 3069.730716626752,
+  "max_mag": 0.9134228523831087,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 4.126220682679559,
+  "dll_eff": 2.0631103413397796,
+  "n_events": 3069.730716626752,
+  "max_mag": 0.9134228523831087,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 5.6837840843327285,
+  "dll_eff": 2.8418920421663643,
+  "n_events": 3069.730716626752,
+  "max_mag": 0.9134228523831087,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.6802240922979763,
+  "dll_eff": 0.34011204614898816,
+  "n_events": 1142.3215147609965,
+  "max_mag": 0.6652656712133413,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 0.7129433861946382,
+  "dll_eff": 0.3564716930973191,
+  "n_events": 1142.3215147609965,
+  "max_mag": 0.6652656712133413,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "rate3@300x2",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 3.2762682167231105e-07,
+  "dll_eff": 1.6381341083615553e-07,
+  "n_events": 1142.3215147609965,
+  "max_mag": 0.6652656712133413,
+  "cost": {
+   "days": 13.75,
+   "deferred_MWh": 147.0,
+   "curtailed_h": 42.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 2.016226370096774,
+  "dll_eff": 1.008113185048387,
+  "n_events": 2612.730411837832,
+  "max_mag": 0.8729571417055744,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 2.194664187937633,
+  "dll_eff": 1.0973320939688165,
+  "n_events": 2612.730411837832,
+  "max_mag": 0.8729571417055744,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 7.419088099723012,
+  "dll_eff": 3.709544049861506,
+  "n_events": 2612.730411837832,
+  "max_mag": 0.8729571417055744,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 73.82179134573289,
+  "dll_eff": 36.910895672866445,
+  "n_events": 3049.2157215688926,
+  "max_mag": 0.9117395404734634,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 85.23889041545863,
+  "dll_eff": 42.61944520772931,
+  "n_events": 3049.2157215688926,
+  "max_mag": 0.9117395404734634,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.2166423150338233e-06,
+  "dll_eff": 1.1083211575169116e-06,
+  "n_events": 3049.2157215688926,
+  "max_mag": 0.9117395404734634,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 347.3808388366415,
+  "dll_eff": 173.69041941832074,
+  "n_events": 1961.904665717296,
+  "max_mag": 0.8010399738303264,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 465.14684854934967,
+  "dll_eff": 232.57342427467484,
+  "n_events": 1961.904665717296,
+  "max_mag": 0.8010399738303264,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 451.2523810760058,
+  "dll_eff": 225.6261905380029,
+  "n_events": 1961.904665717296,
+  "max_mag": 0.8010399738303264,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 3.996692592116233,
+  "dll_eff": 1.9983462960581164,
+  "n_events": 3049.2157215688926,
+  "max_mag": 0.9117395404734634,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 3.055319979563137,
+  "dll_eff": 1.5276599897815686,
+  "n_events": 3049.2157215688926,
+  "max_mag": 0.9117395404734634,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.001374840941025468,
+  "dll_eff": 0.000687420470512734,
+  "n_events": 3049.2157215688926,
+  "max_mag": 0.9117395404734634,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 2.8277095230459963,
+  "dll_eff": 1.4138547615229982,
+  "n_events": 5545.089442802159,
+  "max_mag": 1.0618669424689204,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 3.5814745845364087,
+  "dll_eff": 1.7907372922682043,
+  "n_events": 5545.089442802159,
+  "max_mag": 1.0618669424689204,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 43.881703052828016,
+  "dll_eff": 21.940851526414008,
+  "n_events": 5545.089442802159,
+  "max_mag": 1.0618669424689204,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 1.7248654479681136,
+  "dll_eff": 0.8624327239840568,
+  "n_events": 3001.487489730293,
+  "max_mag": 0.9077790706738844,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 1.9776241516719892,
+  "dll_eff": 0.9888120758359946,
+  "n_events": 3001.487489730293,
+  "max_mag": 0.9077790706738844,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 3.370050762896426e-07,
+  "dll_eff": 1.685025381448213e-07,
+  "n_events": 3001.487489730293,
+  "max_mag": 0.9077790706738844,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 4.497529595494598,
+  "dll_eff": 2.248764797747299,
+  "n_events": 3154.3415181967457,
+  "max_mag": 0.9202485358363504,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 5.601419835262277,
+  "dll_eff": 2.8007099176311385,
+  "n_events": 3154.3415181967457,
+  "max_mag": 0.9202485358363504,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 38.272869102665936,
+  "dll_eff": 19.136434551332968,
+  "n_events": 3154.3415181967457,
+  "max_mag": 0.9202485358363504,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 206.15631364013643,
+  "dll_eff": 103.07815682006822,
+  "n_events": 4371.904245980636,
+  "max_mag": 1.0021918474721805,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 257.6039333572571,
+  "dll_eff": 128.80196667862856,
+  "n_events": 4371.904245980636,
+  "max_mag": 1.0021918474721805,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1.9435998183325864e-05,
+  "dll_eff": 9.717999091662932e-06,
+  "n_events": 4371.904245980636,
+  "max_mag": 1.0021918474721805,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 572.9060383099245,
+  "dll_eff": 286.45301915496225,
+  "n_events": 1852.8211589396078,
+  "max_mag": 0.7866790499266694,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 964.3352207312801,
+  "dll_eff": 482.16761036564003,
+  "n_events": 1852.8211589396078,
+  "max_mag": 0.7866790499266694,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 926.5109419162891,
+  "dll_eff": 463.25547095814454,
+  "n_events": 1852.8211589396078,
+  "max_mag": 0.7866790499266694,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 13.954434858315835,
+  "dll_eff": 6.977217429157918,
+  "n_events": 4371.904245980636,
+  "max_mag": 1.0021918474721805,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 19.651642260760127,
+  "dll_eff": 9.825821130380064,
+  "n_events": 4371.904245980636,
+  "max_mag": 1.0021918474721805,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.0018160268691644887,
+  "dll_eff": 0.0009080134345822444,
+  "n_events": 4371.904245980636,
+  "max_mag": 1.0021918474721805,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 6.531878786969173,
+  "dll_eff": 3.2659393934845866,
+  "n_events": 7805.992640101764,
+  "max_mag": 1.147716411670247,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 8.895128604906859,
+  "dll_eff": 4.447564302453429,
+  "n_events": 7805.992640101764,
+  "max_mag": 1.147716411670247,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 108.42477784899529,
+  "dll_eff": 54.212388924497645,
+  "n_events": 7805.992640101764,
+  "max_mag": 1.147716411670247,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 4.403281264087127,
+  "dll_eff": 2.2016406320435635,
+  "n_events": 4307.695853177875,
+  "max_mag": 0.9984776224675871,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 5.646768368460471,
+  "dll_eff": 2.8233841842302354,
+  "n_events": 4307.695853177875,
+  "max_mag": 0.9984776224675871,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@450",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1.9229264580644667e-07,
+  "dll_eff": 9.614632290322334e-08,
+  "n_events": 4307.695853177875,
+  "max_mag": 0.9984776224675871,
+  "cost": {
+   "days": 9.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 10.35028697832604,
+  "dll_eff": 5.17514348916302,
+  "n_events": 4688.033072683569,
+  "max_mag": 1.0197178737337156,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 12.093102100683609,
+  "dll_eff": 6.0465510503418045,
+  "n_events": 4688.033072683569,
+  "max_mag": 1.0197178737337156,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 47.621227394287416,
+  "dll_eff": 23.810613697143708,
+  "n_events": 4688.033072683569,
+  "max_mag": 1.0197178737337156,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 111.00242187937147,
+  "dll_eff": 55.501210939685734,
+  "n_events": 6262.2437016746735,
+  "max_mag": 1.092399548755648,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 92.21543786610891,
+  "dll_eff": 46.10771893305446,
+  "n_events": 6262.2437016746735,
+  "max_mag": 1.092399548755648,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 4.048402661283035e-05,
+  "dll_eff": 2.0242013306415174e-05,
+  "n_events": 6262.2437016746735,
+  "max_mag": 1.092399548755648,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 368.21133880484103,
+  "dll_eff": 184.10566940242052,
+  "n_events": 3138.666222668485,
+  "max_mag": 0.9189979123697947,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 496.4685268731391,
+  "dll_eff": 248.23426343656956,
+  "n_events": 3138.666222668485,
+  "max_mag": 0.9189979123697947,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 486.23906984932,
+  "dll_eff": 243.11953492466,
+  "n_events": 3138.666222668485,
+  "max_mag": 0.9189979123697947,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 5.696682650443108,
+  "dll_eff": 2.848341325221554,
+  "n_events": 6262.2437016746735,
+  "max_mag": 1.092399548755648,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 6.47709538521849,
+  "dll_eff": 3.238547692609245,
+  "n_events": 6262.2437016746735,
+  "max_mag": 1.092399548755648,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.004200091110760695,
+  "dll_eff": 0.0021000455553803477,
+  "n_events": 6262.2437016746735,
+  "max_mag": 1.092399548755648,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 9.667521275612671,
+  "dll_eff": 4.833760637806336,
+  "n_events": 11161.672276761297,
+  "max_mag": 1.2374858506115178,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 12.920335151567997,
+  "dll_eff": 6.4601675757839985,
+  "n_events": 11161.672276761297,
+  "max_mag": 1.2374858506115178,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 120.00032672165253,
+  "dll_eff": 60.000163360826264,
+  "n_events": 11161.672276761297,
+  "max_mag": 1.2374858506115178,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 4.838902995070384,
+  "dll_eff": 2.419451497535192,
+  "n_events": 5862.428698335041,
+  "max_mag": 1.0758374730505662,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 5.849158201172031,
+  "dll_eff": 2.9245791005860156,
+  "n_events": 5862.428698335041,
+  "max_mag": 1.0758374730505662,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold168@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 4.793346306541935e-07,
+  "dll_eff": 2.3966731532709673e-07,
+  "n_events": 5862.428698335041,
+  "max_mag": 1.0758374730505662,
+  "cost": {
+   "days": 14.083333333333334,
+   "deferred_MWh": 595.0,
+   "curtailed_h": 170.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 15.261414794718803,
+  "dll_eff": 7.6307073973594015,
+  "n_events": 1786.368313965109,
+  "max_mag": 0.7775099777303529,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 16.33298528618343,
+  "dll_eff": 8.166492643091715,
+  "n_events": 1786.368313965109,
+  "max_mag": 0.7775099777303529,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 17.798461178536854,
+  "dll_eff": 8.899230589268427,
+  "n_events": 1786.368313965109,
+  "max_mag": 0.7775099777303529,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 51.480766251988825,
+  "dll_eff": 25.740383125994413,
+  "n_events": 1532.6109803319296,
+  "max_mag": 0.7390480852239587,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 53.748556396520144,
+  "dll_eff": 26.874278198260072,
+  "n_events": 1532.6109803319296,
+  "max_mag": 0.7390480852239587,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1.0358598956372589e-07,
+  "dll_eff": 5.1792994781862944e-08,
+  "n_events": 1532.6109803319296,
+  "max_mag": 0.7390480852239587,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 830.6219806220488,
+  "dll_eff": 415.3109903110244,
+  "n_events": 2409.7515558244218,
+  "max_mag": 0.8526552162193615,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 1099.6118365017956,
+  "dll_eff": 549.8059182508978,
+  "n_events": 2409.7515558244218,
+  "max_mag": 0.8526552162193615,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1061.8009836908705,
+  "dll_eff": 530.9004918454352,
+  "n_events": 2409.7515558244218,
+  "max_mag": 0.8526552162193615,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 56.69184649138788,
+  "dll_eff": 28.34592324569394,
+  "n_events": 1532.6109803319296,
+  "max_mag": 0.7390480852239587,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 59.39955639760137,
+  "dll_eff": 29.699778198800686,
+  "n_events": 1532.6109803319296,
+  "max_mag": 0.7390480852239587,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.0025870916124404175,
+  "dll_eff": 0.0012935458062202088,
+  "n_events": 1532.6109803319296,
+  "max_mag": 0.7390480852239587,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 4.157214522598224,
+  "dll_eff": 2.078607261299112,
+  "n_events": 3971.533940053936,
+  "max_mag": 0.9780806549293342,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 4.5829048701925785,
+  "dll_eff": 2.2914524350962893,
+  "n_events": 3971.533940053936,
+  "max_mag": 0.9780806549293342,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 8.611265452582302,
+  "dll_eff": 4.305632726291151,
+  "n_events": 3971.533940053936,
+  "max_mag": 0.9780806549293342,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 1.9565737846869524,
+  "dll_eff": 0.9782868923434762,
+  "n_events": 1583.2768601917862,
+  "max_mag": 0.7472127856993824,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 2.0573985405972053,
+  "dll_eff": 1.0286992702986026,
+  "n_events": 1583.2768601917862,
+  "max_mag": 0.7472127856993824,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold72@450+rate3@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 3.586046659620479e-07,
+  "dll_eff": 1.7930233298102394e-07,
+  "n_events": 1583.2768601917862,
+  "max_mag": 0.7472127856993824,
+  "cost": {
+   "days": 14.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 7.341066709456754,
+  "dll_eff": 3.670533354728377,
+  "n_events": 1909.8733545358587,
+  "max_mag": 0.7942923840776934,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 8.059572626847512,
+  "dll_eff": 4.029786313423756,
+  "n_events": 1909.8733545358587,
+  "max_mag": 0.7942923840776934,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 8.723448261531303,
+  "dll_eff": 4.361724130765651,
+  "n_events": 1909.8733545358587,
+  "max_mag": 0.7942923840776934,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 76.12368454271291,
+  "dll_eff": 38.061842271356454,
+  "n_events": 1801.0796341085113,
+  "max_mag": 0.7795688844756778,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 81.21841148965632,
+  "dll_eff": 40.60920574482816,
+  "n_events": 1801.0796341085113,
+  "max_mag": 0.7795688844756778,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1.0321400623070076e-07,
+  "dll_eff": 5.160700311535038e-08,
+  "n_events": 1801.0796341085113,
+  "max_mag": 0.7795688844756778,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 718.4837146677082,
+  "dll_eff": 359.2418573338541,
+  "n_events": 2015.70937641563,
+  "max_mag": 0.8078318905945332,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 965.0211680955235,
+  "dll_eff": 482.51058404776177,
+  "n_events": 2015.70937641563,
+  "max_mag": 0.8078318905945332,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 922.1358529596291,
+  "dll_eff": 461.06792647981456,
+  "n_events": 2015.70937641563,
+  "max_mag": 0.8078318905945332,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 50.211420448702484,
+  "dll_eff": 25.105710224351242,
+  "n_events": 1801.0796341085113,
+  "max_mag": 0.7795688844756778,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 39.095903025339794,
+  "dll_eff": 19.547951512669897,
+  "n_events": 1801.0796341085113,
+  "max_mag": 0.7795688844756778,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.001388717542795348,
+  "dll_eff": 0.000694358771397674,
+  "n_events": 1801.0796341085113,
+  "max_mag": 0.7795688844756778,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 23.7480582090775,
+  "dll_eff": 11.87402910453875,
+  "n_events": 4163.50796436942,
+  "max_mag": 0.989931014148075,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 27.578340036436202,
+  "dll_eff": 13.789170018218101,
+  "n_events": 4163.50796436942,
+  "max_mag": 0.989931014148075,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 36.997052554495895,
+  "dll_eff": 18.498526277247947,
+  "n_events": 4163.50796436942,
+  "max_mag": 0.989931014148075,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 1.8330963381622496,
+  "dll_eff": 0.9165481690811248,
+  "n_events": 1832.6227332772005,
+  "max_mag": 0.7839273550916053,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 1.943113130333586,
+  "dll_eff": 0.971556565166793,
+  "n_events": 1832.6227332772005,
+  "max_mag": 0.7839273550916053,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "hold48@450+rate2@300",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 3.1376475817523897e-07,
+  "dll_eff": 1.5688237908761948e-07,
+  "n_events": 1832.6227332772005,
+  "max_mag": 0.7839273550916053,
+  "cost": {
+   "days": 11.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 1.5206563203923906,
+  "dll_eff": 0.7603281601961953,
+  "n_events": 1285.3463225824541,
+  "max_mag": 0.694879430102487,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 1.6472253292058667,
+  "dll_eff": 0.8236126646029334,
+  "n_events": 1285.3463225824541,
+  "max_mag": 0.694879430102487,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1.6751371295267745,
+  "dll_eff": 0.8375685647633873,
+  "n_events": 1285.3463225824541,
+  "max_mag": 0.694879430102487,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 30.18690046211941,
+  "dll_eff": 15.093450231059705,
+  "n_events": 1235.957995452434,
+  "max_mag": 0.6850433329735832,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 32.17523436119518,
+  "dll_eff": 16.08761718059759,
+  "n_events": 1235.957995452434,
+  "max_mag": 0.6850433329735832,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.0768766262335703e-08,
+  "dll_eff": 1.0384383131167851e-08,
+  "n_events": 1235.957995452434,
+  "max_mag": 0.6850433329735832,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 366.63675910828306,
+  "dll_eff": 183.31837955414153,
+  "n_events": 1365.0588007568283,
+  "max_mag": 0.7099841699446712,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 439.6792304662499,
+  "dll_eff": 219.83961523312496,
+  "n_events": 1365.0588007568283,
+  "max_mag": 0.7099841699446712,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 404.72975301985525,
+  "dll_eff": 202.36487650992763,
+  "n_events": 1365.0588007568283,
+  "max_mag": 0.7099841699446712,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.9566891584636323,
+  "dll_eff": 0.47834457923181617,
+  "n_events": 1235.957995452434,
+  "max_mag": 0.6850433329735832,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 32.71835571779047,
+  "dll_eff": 16.359177858895237,
+  "n_events": 1235.957995452434,
+  "max_mag": 0.6850433329735832,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 4.832702234125463e-05,
+  "dll_eff": 2.4163511170627316e-05,
+  "n_events": 1235.957995452434,
+  "max_mag": 0.6850433329735832,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 3.6544861461170512,
+  "dll_eff": 1.8272430730585256,
+  "n_events": 2674.865714474613,
+  "max_mag": 0.8788573635036865,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 4.216621626058441,
+  "dll_eff": 2.1083108130292203,
+  "n_events": 2674.865714474613,
+  "max_mag": 0.8788573635036865,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 6.5091292908673495,
+  "dll_eff": 3.2545646454336747,
+  "n_events": 2674.865714474613,
+  "max_mag": 0.8788573635036865,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 0.4014551781433511,
+  "dll_eff": 0.20072758907167554,
+  "n_events": 1242.4969878369914,
+  "max_mag": 0.6863679764589821,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 0.4248153363791971,
+  "dll_eff": 0.21240766818959855,
+  "n_events": 1242.4969878369914,
+  "max_mag": 0.6863679764589821,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "amp3@6h",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.2480480765807442e-07,
+  "dll_eff": 1.1240240382903721e-07,
+  "n_events": 1242.4969878369914,
+  "max_mag": 0.6863679764589821,
+  "cost": {
+   "days": 8.25,
+   "deferred_MWh": 63.0,
+   "curtailed_h": 18.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 16.105564950231383,
+  "dll_eff": 8.052782475115691,
+  "n_events": 3966.5717501543554,
+  "max_mag": 0.3040409818629147,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 22.595873628193658,
+  "dll_eff": 11.297936814096829,
+  "n_events": 3966.5717501543554,
+  "max_mag": 0.3040409818629147,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 138.9668483082969,
+  "dll_eff": 69.48342415414845,
+  "n_events": 3966.5717501543554,
+  "max_mag": 0.3040409818629147,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 454.3864538514481,
+  "dll_eff": 227.19322692572405,
+  "n_events": 6741.949734551505,
+  "max_mag": 0.35493365333281,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 649.9839234249812,
+  "dll_eff": 324.9919617124906,
+  "n_events": 6741.949734551505,
+  "max_mag": 0.35493365333281,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.00010320202727598371,
+  "dll_eff": 5.1601013637991855e-05,
+  "n_events": 6741.949734551505,
+  "max_mag": 0.35493365333281,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 747.3564886624795,
+  "dll_eff": 373.67824433123974,
+  "n_events": 1937.216736741849,
+  "max_mag": 0.23528344345547966,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 1563.0493248878297,
+  "dll_eff": 781.5246624439148,
+  "n_events": 1937.216736741849,
+  "max_mag": 0.23528344345547966,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1495.0865149667957,
+  "dll_eff": 747.5432574833978,
+  "n_events": 1937.216736741849,
+  "max_mag": 0.23528344345547966,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 59.60421932522422,
+  "dll_eff": 29.80210966261211,
+  "n_events": 6741.949734551505,
+  "max_mag": 0.35493365333281,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 73.1283122820214,
+  "dll_eff": 36.5641561410107,
+  "n_events": 6741.949734551505,
+  "max_mag": 0.35493365333281,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.014030327361069794,
+  "dll_eff": 0.007015163680534897,
+  "n_events": 6741.949734551505,
+  "max_mag": 0.35493365333281,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 14.868100077619602,
+  "dll_eff": 7.434050038809801,
+  "n_events": 12238.445662378574,
+  "max_mag": 0.41213804414302735,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 22.196729625658918,
+  "dll_eff": 11.098364812829459,
+  "n_events": 12238.445662378574,
+  "max_mag": 0.41213804414302735,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 235.42041857600452,
+  "dll_eff": 117.71020928800226,
+  "n_events": 12238.445662378574,
+  "max_mag": 0.41213804414302735,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 9.543420982431599,
+  "dll_eff": 4.771710491215799,
+  "n_events": 6677.138384764302,
+  "max_mag": 0.3540068774949564,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 14.781181854016722,
+  "dll_eff": 7.390590927008361,
+  "n_events": 6677.138384764302,
+  "max_mag": 0.3540068774949564,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.7045371098211035e-07,
+  "dll_eff": 1.3522685549105518e-07,
+  "n_events": 6677.138384764302,
+  "max_mag": 0.3540068774949564,
+  "cost": {
+   "days": 10.083333333333334,
+   "deferred_MWh": 259.0,
+   "curtailed_h": 74.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 23.629789696900843,
+  "dll_eff": 11.814894848450422,
+  "n_events": 2161.470715144018,
+  "max_mag": 0.24579271337561606,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 25.942012079462984,
+  "dll_eff": 12.971006039731492,
+  "n_events": 2161.470715144018,
+  "max_mag": 0.24579271337561606,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 28.25202287697266,
+  "dll_eff": 14.12601143848633,
+  "n_events": 2161.470715144018,
+  "max_mag": 0.24579271337561606,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 91.7390484103853,
+  "dll_eff": 45.86952420519265,
+  "n_events": 1865.0810833652383,
+  "max_mag": 0.2316426233939136,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 96.11098023474187,
+  "dll_eff": 48.05549011737094,
+  "n_events": 1865.0810833652383,
+  "max_mag": 0.2316426233939136,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1.0432268027216196e-07,
+  "dll_eff": 5.216134013608098e-08,
+  "n_events": 1865.0810833652383,
+  "max_mag": 0.2316426233939136,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 973.4798100051712,
+  "dll_eff": 486.7399050025856,
+  "n_events": 2496.5925701339584,
+  "max_mag": 0.25962174024345175,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 1539.6007234303643,
+  "dll_eff": 769.8003617151821,
+  "n_events": 2496.5925701339584,
+  "max_mag": 0.25962174024345175,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1470.5556491022508,
+  "dll_eff": 735.2778245511254,
+  "n_events": 2496.5925701339584,
+  "max_mag": 0.25962174024345175,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 91.85801188501682,
+  "dll_eff": 45.92900594250841,
+  "n_events": 1865.0810833652383,
+  "max_mag": 0.2316426233939136,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 96.22676376699019,
+  "dll_eff": 48.113381883495094,
+  "n_events": 1865.0810833652383,
+  "max_mag": 0.2316426233939136,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.0091664530136768,
+  "dll_eff": 0.0045832265068384,
+  "n_events": 1865.0810833652383,
+  "max_mag": 0.2316426233939136,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 31.672978131098716,
+  "dll_eff": 15.836489065549358,
+  "n_events": 4808.5987070091805,
+  "max_mag": 0.3225103469483761,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 35.86494393328758,
+  "dll_eff": 17.93247196664379,
+  "n_events": 4808.5987070091805,
+  "max_mag": 0.3225103469483761,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 41.95948752848744,
+  "dll_eff": 20.97974376424372,
+  "n_events": 4808.5987070091805,
+  "max_mag": 0.3225103469483761,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 3.5546447482647636,
+  "dll_eff": 1.7773223741323818,
+  "n_events": 1941.719714786508,
+  "max_mag": 0.23550620007785514,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 3.8102797234723766,
+  "dll_eff": 1.9051398617361883,
+  "n_events": 1941.719714786508,
+  "max_mag": 0.23550620007785514,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate3@300+hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 4.25885446020402e-07,
+  "dll_eff": 2.12942723010201e-07,
+  "n_events": 1941.719714786508,
+  "max_mag": 0.23550620007785514,
+  "cost": {
+   "days": 15.458333333333334,
+   "deferred_MWh": 332.5,
+   "curtailed_h": 95.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 4.839084383500449,
+  "dll_eff": 2.4195421917502244,
+  "n_events": 2299.653821321133,
+  "max_mag": 0.25173827411130134,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 5.280176213896993,
+  "dll_eff": 2.6400881069484967,
+  "n_events": 2299.653821321133,
+  "max_mag": 0.25173827411130134,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 8.006365608495798,
+  "dll_eff": 4.003182804247899,
+  "n_events": 2299.653821321133,
+  "max_mag": 0.25173827411130134,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 152.89906331769726,
+  "dll_eff": 76.44953165884863,
+  "n_events": 2277.212742292822,
+  "max_mag": 0.25079742012631046,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 168.78864206389062,
+  "dll_eff": 84.39432103194531,
+  "n_events": 2277.212742292822,
+  "max_mag": 0.25079742012631046,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 8.035121936700307e-07,
+  "dll_eff": 4.0175609683501534e-07,
+  "n_events": 2277.212742292822,
+  "max_mag": 0.25079742012631046,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 869.4708587637815,
+  "dll_eff": 434.73542938189075,
+  "n_events": 2103.107982781027,
+  "max_mag": 0.24316650088552919,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 1412.0687027026524,
+  "dll_eff": 706.0343513513262,
+  "n_events": 2103.107982781027,
+  "max_mag": 0.24316650088552919,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 1338.3256654279476,
+  "dll_eff": 669.1628327139738,
+  "n_events": 2103.107982781027,
+  "max_mag": 0.24316650088552919,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 153.16178817309265,
+  "dll_eff": 76.58089408654632,
+  "n_events": 2277.212742292822,
+  "max_mag": 0.25079742012631046,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 162.3698616651891,
+  "dll_eff": 81.18493083259455,
+  "n_events": 2277.212742292822,
+  "max_mag": 0.25079742012631046,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.011545029594344669,
+  "dll_eff": 0.0057725147971723345,
+  "n_events": 2277.212742292822,
+  "max_mag": 0.25079742012631046,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 101.4356853711488,
+  "dll_eff": 50.7178426855744,
+  "n_events": 5333.434277855871,
+  "max_mag": 0.33244904795375296,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 121.51001648260717,
+  "dll_eff": 60.755008241303585,
+  "n_events": 5333.434277855871,
+  "max_mag": 0.33244904795375296,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 142.92935205299364,
+  "dll_eff": 71.46467602649682,
+  "n_events": 5333.434277855871,
+  "max_mag": 0.33244904795375296,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 3.3776084282189913,
+  "dll_eff": 1.6888042141094957,
+  "n_events": 2336.535020114039,
+  "max_mag": 0.25326477245448176,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 3.6606518758562743,
+  "dll_eff": 1.8303259379281371,
+  "n_events": 2336.535020114039,
+  "max_mag": 0.25326477245448176,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate2@300+hold48@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 4.6885998017387465e-07,
+  "dll_eff": 2.3442999008693732e-07,
+  "n_events": 2336.535020114039,
+  "max_mag": 0.25326477245448176,
+  "cost": {
+   "days": 12.791666666666666,
+   "deferred_MWh": 234.5,
+   "curtailed_h": 67.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 8.871489175882743,
+  "dll_eff": 4.435744587941372,
+  "n_events": 1380.0810902885733,
+  "max_mag": 0.2027482134279213,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 9.053485063749577,
+  "dll_eff": 4.526742531874788,
+  "n_events": 1380.0810902885733,
+  "max_mag": 0.2027482134279213,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "dieterich+diffusion(ta=178h)",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 11.631469527585978,
+  "dll_eff": 5.815734763792989,
+  "n_events": 1380.0810902885733,
+  "max_mag": 0.2027482134279213,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 57.90657106738627,
+  "dll_eff": 28.953285533693133,
+  "n_events": 1188.8174263626056,
+  "max_mag": 0.18843513004642773,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 60.54308456541503,
+  "dll_eff": 30.271542282707514,
+  "n_events": 1188.8174263626056,
+  "max_mag": 0.18843513004642773,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "nucleation",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2.757801667030435e-07,
+  "dll_eff": 1.3789008335152175e-07,
+  "n_events": 1188.8174263626056,
+  "max_mag": 0.18843513004642773,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 1359.3217093540761,
+  "dll_eff": 679.6608546770381,
+  "n_events": 3052.083333351764,
+  "max_mag": 0.2788964563287286,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 2079.431672422277,
+  "dll_eff": 1039.7158362111386,
+  "n_events": 3052.083333351764,
+  "max_mag": 0.2788964563287286,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "nucleation",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 2033.7457147493515,
+  "dll_eff": 1016.8728573746757,
+  "n_events": 3052.083333351764,
+  "max_mag": 0.2788964563287286,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 57.920465359416994,
+  "dll_eff": 28.960232679708497,
+  "n_events": 1188.8174263626056,
+  "max_mag": 0.18843513004642773,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 60.54701729280123,
+  "dll_eff": 30.273508646400614,
+  "n_events": 1188.8174263626056,
+  "max_mag": 0.18843513004642773,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+diffusion",
+  "alt": "exp+cascade",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 0.07557242051598223,
+  "dll_eff": 0.037786210257991115,
+  "n_events": 1188.8174263626056,
+  "max_mag": 0.18843513004642773,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 38.27137655617844,
+  "dll_eff": 19.13568827808922,
+  "n_events": 3780.1975421747475,
+  "max_mag": 0.29942363751702017,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 41.06731665139705,
+  "dll_eff": 20.533658325698525,
+  "n_events": 3780.1975421747475,
+  "max_mag": 0.29942363751702017,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+cascade",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 49.7237335607424,
+  "dll_eff": 24.8618667803712,
+  "n_events": 3780.1975421747475,
+  "max_mag": 0.29942363751702017,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "occupancy",
+  "monitoring": "gauge",
+  "dll": 2.675667243571297,
+  "dll_eff": 1.3378336217856486,
+  "n_events": 1235.9967765601336,
+  "max_mag": 0.19216910641247473,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "gauge",
+  "dll": 2.758533439077837,
+  "dll_eff": 1.3792667195389186,
+  "n_events": 1235.9967765601336,
+  "max_mag": 0.19216910641247473,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ },
+ {
+  "design": "rate3@300x2+hold72@600",
+  "truth": "exp+lag",
+  "alt": "exp+diffusion",
+  "mode": "counts",
+  "monitoring": "deepgauge",
+  "dll": 4.046642061439343e-07,
+  "dll_eff": 2.0233210307196714e-07,
+  "n_events": 1235.9967765601336,
+  "max_mag": 0.19216910641247473,
+  "cost": {
+   "days": 20.833333333333332,
+   "deferred_MWh": 406.0,
+   "curtailed_h": 116.0
+  }
+ }
+]

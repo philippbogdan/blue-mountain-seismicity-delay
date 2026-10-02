@@ -72,7 +72,7 @@ class Data:
         return m
 
 
-def transport(p, kind, tau_h, dt=DT_H):
+def transport(p, kind, tau_h, dt=DT_H, shape=1.0):
     if kind == "none" or tau_h <= 0:
         return p.copy()
     if kind == "shift":
@@ -84,6 +84,8 @@ def transport(p, kind, tau_h, dt=DT_H):
         step = special.erfc(np.sqrt(tau_h / tk))
     elif kind == "lag":
         step = -np.expm1(-tk / tau_h)
+    elif kind == "gamma":                      # gamma kernel, mean tau_h, shape k
+        step = special.gammainc(shape, tk * shape / tau_h)
     else:
         raise ValueError(kind)
     dp = np.diff(np.r_[p[0], p])
@@ -103,7 +105,7 @@ def dieterich_rate(S, r0, ta_h, As, dt=DT_H, g0=1.0):
 
 def rate_model(d, spec, th):
     """Rate (events/h) on the data grid for model spec and parameters th."""
-    pf = transport(d.p, spec["transport"], th.get("tau", 0.0))
+    pf = transport(d.p, spec["transport"], th.get("tau", 0.0), shape=th.get("kg", 1.0))
     law = spec["law"]
     S = pf - pf[0]
     if "beta" in th:                      # instantaneous poroelastic stress, either sign

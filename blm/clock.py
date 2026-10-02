@@ -147,7 +147,66 @@ def run(out="results/clock.json"):
     import json
     res = dict(tide=tide_profile(), tide_no_baro=tide_profile(baro=False, n_boot=100),
                tide_second_half=tide_profile(a=-1013.0, b=QUIET[1], deg=4, n_boot=100),
-               schedule=schedule(), restarts=restarts(), rate_file=rate_file_offsets())
+               schedule=schedule(), restarts=restarts(), rate_file=rate_file_offsets(),
+               regional=regional(), wind=wind(), volumes=volumes())
     with open(out, "w") as fh:
         json.dump(res, fh, indent=1)
     return res
+
+
+def regional(offsets=(0, -7, -8, 7, 8), amp_min=-1.8):
+    """Are regional earthquakes (USGS ComCat, UTC) in the catalogue under any clock?
+    For events whose expected DAS amplitude proxy 0.69 M - 1.588 log10(R km) exceeds
+    amp_min, count catalogue events in the 1-minute file holding the S arrival."""
+    e = pd.read_csv(f"{io.ROOT}/data/external/usgs_400km_M1.5.csv")
+    lat0, lon0 = tides.SITE
+    p1, p2 = np.radians(lat0), np.radians(e.latitude)
+    dkm = 6371 * np.arccos(np.clip(np.sin(p1) * np.sin(p2) + np.cos(p1) * np.cos(p2)
+                                   * np.cos(np.radians(e.longitude - lon0)), -1, 1))
+    hyp = np.sqrt(dkm ** 2 + (e.depth + 2.7) ** 2)
+    amp = 0.69 * e.mag - 1.588 * np.log10(hyp)
+    t = pd.to_datetime(e.time).dt.tz_localize(None) + pd.to_timedelta(hyp / 3.5, unit="s")
+    sel = amp > amp_min
+    c = io.load_catalog()
+    ct = c.time.values.astype("datetime64[s]").astype(np.int64)
+    out = {}
+    for off in offsets:
+        ts = (t[sel] + pd.Timedelta(hours=off)).values.astype("datetime64[s]").astype(np.int64)
+        ts = ts[(ts > ct.min()) & (ts < ct.max())]
+        hits = sum(bool(np.any((ct > s - 62) & (ct <= s + 1))) for s in ts)
+        out[f"{off:+d}"] = [int(hits), int(len(ts))]
+    # base rate: fraction of catalogue-span minutes holding an event
+    span = (ct.max() - ct.min()) / 60
+    return dict(hits_by_offset=out, base_rate=float(len(ct) / span), amp_min=amp_min)
+
+
+def wind(offsets=range(-12, 13)):
+    """Correlation of hourly detection anomalies with Winnemucca wind speed (UTC)."""
+    w = pd.read_csv(f"{io.ROOT}/data/external/asos_WMC_2023.csv", na_values=["M", "T"])
+    w = w.dropna(subset=["sknt"])
+    wh = np.floor(((pd.to_datetime(w.valid) - io.T_REF) / pd.Timedelta(hours=1)).to_numpy())
+    W = pd.Series(w.sknt.to_numpy()).groupby(wh).mean()
+    c = io.load_catalog()
+    t = c.th.to_numpy()
+    hb = np.arange(np.floor(t.min()), np.ceil(t.max()))
+    cnt, _ = np.histogram(t, bins=np.r_[hb, hb[-1] + 1])
+    valid = np.ones(len(hb), bool)
+    for i in np.flatnonzero(np.diff(t) > 1.5):
+        valid[(hb >= t[i]) & (hb + 1 <= t[i + 1])] = False
+    valid &= (hb > -850) & ~((hb > 0) & (hb < 200))
+    base = pd.Series(cnt.astype(float)).rolling(49, center=True, min_periods=10).median().to_numpy()
+    out = {}
+    for off in offsets:
+        ws = W.reindex(hb - off).to_numpy()
+        m = valid & np.isfinite(ws) & np.isfinite(base)
+        out[f"{off:+d}"] = float(np.corrcoef(ws[m], (cnt - base)[m])[0, 1])
+    return dict(corr_by_offset=out, max_abs=float(max(abs(v) for v in out.values())))
+
+
+def volumes():
+    """Injected and produced volumes from the rate file (gpm -> m3)."""
+    r = io.load_rates()
+    dt_min = float(np.median(np.diff(r["th"])) * 60)
+    gal = 3.785411784e-3
+    return dict(injected_m3=float(np.sum(r["qi"]) * dt_min * gal), produced_m3=float(np.sum(r["qp"]) * dt_min * gal),
+                paper_injected_m3=1.35e5, paper_produced_m3=1.07e5)

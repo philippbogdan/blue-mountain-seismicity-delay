@@ -123,6 +123,17 @@ def run(out=f"{R}/numbers.json"):
     mc = _load("design_mc.json")
     if mc:
         N["design_mc"] = entry(mc, "Monte-Carlo check of expected separations", "deterministic E[dll]/phi", "design_mc.json")
+    # convergence checks: no profile point may beat the model's best fit; fold stability of tau
+    chk = {}
+    if prof:
+        for k, v in prof.items():
+            chk[f"profile_max_minus_fit:{k}"] = float(max(v["ll"]) - v["ll_best"])
+    if val:
+        by = {(r["model"], r["scheme"]): r for r in val}
+        for m in ["exp+diffusion", "exp+diffusion+cascade", "dieterich+diffusion"]:
+            chk[f"tau_by_fold:{m}"] = [by[(m, f"loco:{c}")]["theta"].get("tau") for c in ["I", "II", "III", "IV", "V"]]
+    N["convergence_checks"] = entry(chk, "profile maxima minus best-fit log-likelihood (must be <= ~0.05); "
+                                    "transport time in each leave-one-cycle-out fit", "0 / the all-cycle fit", "profiles.json, validate")
     with open(out, "w") as fh:
         json.dump(N, fh, indent=1, default=float)
     return N

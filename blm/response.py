@@ -104,6 +104,38 @@ def run(n_boot=200, seed=0, out="results/response.json"):
                   for key in ["centroid_lag_h", "peak_lag_h", "xcorr_lag_h", "excess_events"]}
             out_c[c] = dict(m0, ci68=ci)
         res["classes"][cls] = out_c
+    res["step_tests"] = step_tests()
     with open(out, "w") as fh:
         json.dump(res, fh, indent=1)
     return res
+
+
+def step_tests(win_h=3.0):
+    """Rate (saturation-corrected) in the win_h hours before and after each
+    shut-in (ramp start) and restart (pressure peak), occupancy likelihood-ratio
+    test of equal rates, and a two-sample KS test of the magnitudes (a detection
+    change would shift them)."""
+    from scipy import stats
+    c = io.load_catalog()
+    tm, occ, obs = rates.minute_grid(-10.0, 220.0, cat=c)
+
+    def win(a, b):
+        m = (tm >= a) & (tm < b) & obs
+        n, k = int(m.sum()), int(occ[m].sum())
+        lam = float(-np.log(1 - k / n) * 60) if 0 < k < n else float("nan")
+        mags = c.mag[(c.th >= a) & (c.th < b)].to_numpy()
+        return n, k, lam, mags
+
+    def ll(k, n, p):
+        return k * np.log(p) + (n - k) * np.log(1 - p)
+
+    out = {}
+    for name, s, e in models.CYCLES:
+        for kind, t0 in [("shut-in", s), ("restart", e)]:
+            n1, k1, l1, m1 = win(t0 - win_h, t0)
+            n2, k2, l2, m2 = win(t0, t0 + win_h)
+            p0 = (k1 + k2) / (n1 + n2)
+            LR = 2 * (ll(k1, n1, k1 / n1) + ll(k2, n2, k2 / n2) - ll(k1, n1, p0) - ll(k2, n2, p0))
+            out[f"{name}:{kind}"] = dict(rate_before=l1, rate_after=l2, p_rate=float(stats.chi2.sf(LR, 1)),
+                                         p_mag_ks=float(stats.ks_2samp(m1, m2).pvalue))
+    return out

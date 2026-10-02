@@ -1,0 +1,1119 @@
+{
+ "skill": {
+  "const": {
+   "loco": 0.0,
+   "slow2fast": 0.0,
+   "fast2slow": 0.0
+  },
+  "coulomb": {
+   "loco": -0.0011132598621983463,
+   "slow2fast": 0.0009979338804946471,
+   "fast2slow": -2.075360013028179e-06
+  },
+  "coulomb+diffusion": {
+   "loco": 0.12169459987478302,
+   "slow2fast": 0.16455549498406782,
+   "fast2slow": 0.09612873005621109
+  },
+  "dieterich": {
+   "loco": 0.11539912882800825,
+   "slow2fast": 0.029736640275118468,
+   "fast2slow": 0.03258151479736663
+  },
+  "dieterich+cascade": {
+   "loco": 0.1417804640859488,
+   "slow2fast": 0.09085524236287541,
+   "fast2slow": 0.17389542477269854
+  },
+  "dieterich+diffusion": {
+   "loco": 0.14501585751663296,
+   "slow2fast": 0.02843527262018577,
+   "fast2slow": 0.045422838579114
+  },
+  "dieterich+diffusion(ta=178h)": {
+   "loco": 0.14577021293407622,
+   "slow2fast": 0.06249328802046708,
+   "fast2slow": 0.16660463826550162
+  },
+  "dieterich+lag": {
+   "loco": 0.14423191379799893,
+   "slow2fast": -0.2950587017214804,
+   "fast2slow": 0.17112806018856577
+  },
+  "exp": {
+   "loco": 0.10277413359013933,
+   "slow2fast": 0.17455537170128935,
+   "fast2slow": 0.10053097000241977
+  },
+  "exp+cascade": {
+   "loco": 0.14374049362971153,
+   "slow2fast": 0.21971720722312832,
+   "fast2slow": 0.17389578170970377
+  },
+  "exp+diffusion": {
+   "loco": 0.144880771357878,
+   "slow2fast": 0.19306681553852953,
+   "fast2slow": 0.17313577237585742
+  },
+  "exp+diffusion+cascade": {
+   "loco": 0.1543622257941399,
+   "slow2fast": 0.20762361310218655,
+   "fast2slow": 0.18518458068552066
+  },
+  "exp+diffusion+poro": {
+   "loco": 0.14228667964649336,
+   "slow2fast": 0.19743442776410494,
+   "fast2slow": 0.17341675641805293
+  },
+  "exp+lag": {
+   "loco": 0.14348946293698178,
+   "slow2fast": 0.2270754580021111,
+   "fast2slow": 0.17113595336089324
+  },
+  "exp+shift": {
+   "loco": 0.13105262603791254,
+   "slow2fast": 0.1847636854863967,
+   "fast2slow": 0.13862670381178957
+  },
+  "paper:D=0.43(4Dt)": {
+   "loco": 0.023332921328549954,
+   "slow2fast": -1.3376755272491772,
+   "fast2slow": 0.00041270318453001664
+  },
+  "paper:D=0.43(4piDt)": {
+   "loco": 0.08419002738425717,
+   "slow2fast": 0.0023169653225468805,
+   "fast2slow": 0.1657866594866555
+  },
+  "paper:p+dp/dt": {
+   "loco": 0.1027730745594477,
+   "slow2fast": 0.17419604138104802,
+   "fast2slow": 0.10053003501108157
+  },
+  "rate+diffusion": {
+   "loco": 0.10346467220187457,
+   "slow2fast": 0.1561924865087678,
+   "fast2slow": -0.038252385843157925
+  }
+ },
+ "designs": [
+  {
+   "design": "BM2023",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 7.083333333333333,
+    "deferred_MWh": 93.20500000000001,
+    "curtailed_h": 53.260000000000005,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.6761894636692887,
+    "exp+diffusion -> nucleation": 35.46833245174048,
+    "nucleation -> exp+diffusion": 238.83884822532104,
+    "exp+diffusion -> exp+cascade": 0.8962189516578292,
+    "exp+cascade -> exp+diffusion": 9.228326606553765,
+    "exp+lag -> exp+diffusion": 1.3052405607131732
+   },
+   "max_mag": 0.270957814528495,
+   "n_events": 2809.709503380297,
+   "min_sep": 0.8962189516578292,
+   "hardest": "exp+diffusion -> exp+cascade"
+  },
+  {
+   "design": "BM2023",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 7.083333333333333,
+    "deferred_MWh": 93.20500000000001,
+    "curtailed_h": 53.260000000000005,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.9661435969292143,
+    "exp+diffusion -> nucleation": 26.547804977009037,
+    "nucleation -> exp+diffusion": 264.065858330644,
+    "exp+diffusion -> exp+cascade": 1.1136852078338961,
+    "exp+cascade -> exp+diffusion": 12.361183169857668,
+    "exp+lag -> exp+diffusion": 1.526169452924023
+   },
+   "max_mag": 0.270957814528495,
+   "n_events": 2809.709503380297,
+   "min_sep": 1.1136852078338961,
+   "hardest": "exp+diffusion -> exp+cascade"
+  },
+  {
+   "design": "BM2023",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 7.083333333333333,
+    "deferred_MWh": 93.20500000000001,
+    "curtailed_h": 53.260000000000005,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.00541151575726,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.270957814528495,
+   "n_events": 2809.709503380297,
+   "min_sep": 5.00541151575726,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 8.375,
+    "deferred_MWh": 73.5,
+    "curtailed_h": 21.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.3194091452487555,
+    "exp+diffusion -> nucleation": 12.52348512601452,
+    "nucleation -> exp+diffusion": 176.37151912267768,
+    "exp+diffusion -> exp+cascade": 0.31287755716766696,
+    "exp+cascade -> exp+diffusion": 0.3360243918532433,
+    "exp+lag -> exp+diffusion": 0.20033438050768382
+   },
+   "max_mag": 0.1771456625741121,
+   "n_events": 1056.8476493727496,
+   "min_sep": 0.31287755716766696,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 8.375,
+    "deferred_MWh": 73.5,
+    "curtailed_h": 21.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.3401061041349749,
+    "exp+diffusion -> nucleation": 14.443753312827766,
+    "nucleation -> exp+diffusion": 227.9301003833193,
+    "exp+diffusion -> exp+cascade": 0.32124167746383137,
+    "exp+cascade -> exp+diffusion": 0.3790823544172781,
+    "exp+lag -> exp+diffusion": 0.21164282061818085
+   },
+   "max_mag": 0.1771456625741121,
+   "n_events": 1056.8476493727496,
+   "min_sep": 0.32124167746383137,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 8.375,
+    "deferred_MWh": 73.5,
+    "curtailed_h": 21.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.3659883390837422,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.1771456625741121,
+   "n_events": 1056.8476493727496,
+   "min_sep": 0.3659883390837422,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300x2",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 13.75,
+    "deferred_MWh": 147.0,
+    "curtailed_h": 42.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.40306370332314145,
+    "exp+diffusion -> nucleation": 18.214409090188155,
+    "nucleation -> exp+diffusion": 319.178009767229,
+    "exp+diffusion -> exp+cascade": 18.625086233002094,
+    "exp+cascade -> exp+diffusion": 1.9017468069032475,
+    "exp+lag -> exp+diffusion": 0.34011204614898816
+   },
+   "max_mag": 0.18301616582763133,
+   "n_events": 1123.5327596058669,
+   "min_sep": 0.40306370332314145,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300x2",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 13.75,
+    "deferred_MWh": 147.0,
+    "curtailed_h": 42.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.425863505788584,
+    "exp+diffusion -> nucleation": 19.650690629449173,
+    "nucleation -> exp+diffusion": 401.848453423976,
+    "exp+diffusion -> exp+cascade": 19.705768866966764,
+    "exp+cascade -> exp+diffusion": 2.0631103413397796,
+    "exp+lag -> exp+diffusion": 0.3564716930973191
+   },
+   "max_mag": 0.18301616582763133,
+   "n_events": 1123.5327596058669,
+   "min_sep": 0.425863505788584,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300x2",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 13.75,
+    "deferred_MWh": 147.0,
+    "curtailed_h": 42.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.45758762034620304,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.18301616582763133,
+   "n_events": 1123.5327596058669,
+   "min_sep": 0.45758762034620304,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "hold72@300",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 9.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.008113185048387,
+    "exp+diffusion -> nucleation": 36.910895672866445,
+    "nucleation -> exp+diffusion": 173.69041941832074,
+    "exp+diffusion -> exp+cascade": 1.9983462960581164,
+    "exp+cascade -> exp+diffusion": 1.4138547615229982,
+    "exp+lag -> exp+diffusion": 0.8624327239840568
+   },
+   "max_mag": 0.27880626986880674,
+   "n_events": 3049.2157215688926,
+   "min_sep": 1.008113185048387,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold72@300",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 9.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 1.0973320939688165,
+    "exp+diffusion -> nucleation": 42.61944520772931,
+    "nucleation -> exp+diffusion": 232.57342427467484,
+    "exp+diffusion -> exp+cascade": 1.5276599897815686,
+    "exp+cascade -> exp+diffusion": 1.7907372922682043,
+    "exp+lag -> exp+diffusion": 0.9888120758359946
+   },
+   "max_mag": 0.27880626986880674,
+   "n_events": 3049.2157215688926,
+   "min_sep": 1.0973320939688165,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold72@300",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 9.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 3.709544049861506,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.27880626986880674,
+   "n_events": 3049.2157215688926,
+   "min_sep": 3.709544049861506,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "hold72@450",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 9.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.248764797747299,
+    "exp+diffusion -> nucleation": 103.07815682006822,
+    "nucleation -> exp+diffusion": 286.45301915496225,
+    "exp+diffusion -> exp+cascade": 6.977217429157918,
+    "exp+cascade -> exp+diffusion": 3.2659393934845866,
+    "exp+lag -> exp+diffusion": 2.2016406320435635
+   },
+   "max_mag": 0.31337589804970345,
+   "n_events": 4371.904245980636,
+   "min_sep": 2.248764797747299,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold72@450",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 9.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.8007099176311385,
+    "exp+diffusion -> nucleation": 128.80196667862856,
+    "nucleation -> exp+diffusion": 482.16761036564003,
+    "exp+diffusion -> exp+cascade": 9.825821130380064,
+    "exp+cascade -> exp+diffusion": 4.447564302453429,
+    "exp+lag -> exp+diffusion": 2.8233841842302354
+   },
+   "max_mag": 0.31337589804970345,
+   "n_events": 4371.904245980636,
+   "min_sep": 2.8007099176311385,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "hold72@450",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 9.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 19.136434551332968,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.31337589804970345,
+   "n_events": 4371.904245980636,
+   "min_sep": 19.136434551332968,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "hold168@300",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 14.083333333333334,
+    "deferred_MWh": 595.0,
+    "curtailed_h": 170.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.17514348916302,
+    "exp+diffusion -> nucleation": 55.501210939685734,
+    "nucleation -> exp+diffusion": 184.10566940242052,
+    "exp+diffusion -> exp+cascade": 2.848341325221554,
+    "exp+cascade -> exp+diffusion": 4.833760637806336,
+    "exp+lag -> exp+diffusion": 2.419451497535192
+   },
+   "max_mag": 0.3478520412891135,
+   "n_events": 6262.2437016746735,
+   "min_sep": 2.848341325221554,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold168@300",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 14.083333333333334,
+    "deferred_MWh": 595.0,
+    "curtailed_h": 170.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 6.0465510503418045,
+    "exp+diffusion -> nucleation": 46.10771893305446,
+    "nucleation -> exp+diffusion": 248.23426343656956,
+    "exp+diffusion -> exp+cascade": 3.238547692609245,
+    "exp+cascade -> exp+diffusion": 6.4601675757839985,
+    "exp+lag -> exp+diffusion": 2.9245791005860156
+   },
+   "max_mag": 0.3478520412891135,
+   "n_events": 6262.2437016746735,
+   "min_sep": 3.238547692609245,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold168@300",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 14.083333333333334,
+    "deferred_MWh": 595.0,
+    "curtailed_h": 170.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 23.810613697143708,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.3478520412891135,
+   "n_events": 6262.2437016746735,
+   "min_sep": 23.810613697143708,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "hold72@450+rate3@300",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 14.458333333333334,
+    "deferred_MWh": 332.5,
+    "curtailed_h": 95.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 7.6307073973594015,
+    "exp+diffusion -> nucleation": 25.740383125994413,
+    "nucleation -> exp+diffusion": 415.3109903110244,
+    "exp+diffusion -> exp+cascade": 28.34592324569394,
+    "exp+cascade -> exp+diffusion": 2.078607261299112,
+    "exp+lag -> exp+diffusion": 0.9782868923434762
+   },
+   "max_mag": 0.21280596986454045,
+   "n_events": 1532.6109803319296,
+   "min_sep": 2.078607261299112,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold72@450+rate3@300",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 14.458333333333334,
+    "deferred_MWh": 332.5,
+    "curtailed_h": 95.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 8.166492643091715,
+    "exp+diffusion -> nucleation": 26.874278198260072,
+    "nucleation -> exp+diffusion": 549.8059182508978,
+    "exp+diffusion -> exp+cascade": 29.699778198800686,
+    "exp+cascade -> exp+diffusion": 2.2914524350962893,
+    "exp+lag -> exp+diffusion": 1.0286992702986026
+   },
+   "max_mag": 0.21280596986454045,
+   "n_events": 1532.6109803319296,
+   "min_sep": 2.2914524350962893,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold72@450+rate3@300",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 14.458333333333334,
+    "deferred_MWh": 332.5,
+    "curtailed_h": 95.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 8.899230589268427,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.21280596986454045,
+   "n_events": 1532.6109803319296,
+   "min_sep": 8.899230589268427,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "hold48@450+rate2@300",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 11.791666666666666,
+    "deferred_MWh": 234.5,
+    "curtailed_h": 67.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 3.670533354728377,
+    "exp+diffusion -> nucleation": 38.061842271356454,
+    "nucleation -> exp+diffusion": 359.2418573338541,
+    "exp+diffusion -> exp+cascade": 25.105710224351242,
+    "exp+cascade -> exp+diffusion": 11.87402910453875,
+    "exp+lag -> exp+diffusion": 0.9165481690811248
+   },
+   "max_mag": 0.22829246225156777,
+   "n_events": 1801.0796341085113,
+   "min_sep": 3.670533354728377,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold48@450+rate2@300",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 11.791666666666666,
+    "deferred_MWh": 234.5,
+    "curtailed_h": 67.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.029786313423756,
+    "exp+diffusion -> nucleation": 40.60920574482816,
+    "nucleation -> exp+diffusion": 482.51058404776177,
+    "exp+diffusion -> exp+cascade": 19.547951512669897,
+    "exp+cascade -> exp+diffusion": 13.789170018218101,
+    "exp+lag -> exp+diffusion": 0.971556565166793
+   },
+   "max_mag": 0.22829246225156777,
+   "n_events": 1801.0796341085113,
+   "min_sep": 4.029786313423756,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold48@450+rate2@300",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 11.791666666666666,
+    "deferred_MWh": 234.5,
+    "curtailed_h": 67.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.361724130765651,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.22829246225156777,
+   "n_events": 1801.0796341085113,
+   "min_sep": 4.361724130765651,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "amp3@6h",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 8.25,
+    "deferred_MWh": 63.0,
+    "curtailed_h": 18.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.7603281601961953,
+    "exp+diffusion -> nucleation": 15.093450231059705,
+    "nucleation -> exp+diffusion": 183.31837955414153,
+    "exp+diffusion -> exp+cascade": 0.47834457923181617,
+    "exp+cascade -> exp+diffusion": 1.8272430730585256,
+    "exp+lag -> exp+diffusion": 0.20072758907167554
+   },
+   "max_mag": 0.1921660960211525,
+   "n_events": 1235.957995452434,
+   "min_sep": 0.47834457923181617,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "amp3@6h",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 8.25,
+    "deferred_MWh": 63.0,
+    "curtailed_h": 18.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.8236126646029334,
+    "exp+diffusion -> nucleation": 16.08761718059759,
+    "nucleation -> exp+diffusion": 219.83961523312496,
+    "exp+diffusion -> exp+cascade": 16.359177858895237,
+    "exp+cascade -> exp+diffusion": 2.1083108130292203,
+    "exp+lag -> exp+diffusion": 0.21240766818959855
+   },
+   "max_mag": 0.1921660960211525,
+   "n_events": 1235.957995452434,
+   "min_sep": 0.8236126646029334,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "amp3@6h",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 8.25,
+    "deferred_MWh": 63.0,
+    "curtailed_h": 18.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 0.8375685647633873,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.1921660960211525,
+   "n_events": 1235.957995452434,
+   "min_sep": 0.8375685647633873,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "hold72@600",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 10.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 8.052782475115691,
+    "exp+diffusion -> nucleation": 227.19322692572405,
+    "nucleation -> exp+diffusion": 373.67824433123974,
+    "exp+diffusion -> exp+cascade": 29.80210966261211,
+    "exp+cascade -> exp+diffusion": 7.434050038809801,
+    "exp+lag -> exp+diffusion": 4.771710491215799
+   },
+   "max_mag": 0.35493365333281,
+   "n_events": 6741.949734551505,
+   "min_sep": 7.434050038809801,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold72@600",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 10.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 11.297936814096829,
+    "exp+diffusion -> nucleation": 324.9919617124906,
+    "nucleation -> exp+diffusion": 781.5246624439148,
+    "exp+diffusion -> exp+cascade": 36.5641561410107,
+    "exp+cascade -> exp+diffusion": 11.098364812829459,
+    "exp+lag -> exp+diffusion": 7.390590927008361
+   },
+   "max_mag": 0.35493365333281,
+   "n_events": 6741.949734551505,
+   "min_sep": 11.098364812829459,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "hold72@600",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 10.083333333333334,
+    "deferred_MWh": 259.0,
+    "curtailed_h": 74.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 69.48342415414845,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.35493365333281,
+   "n_events": 6741.949734551505,
+   "min_sep": 69.48342415414845,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300+hold72@600",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 15.458333333333334,
+    "deferred_MWh": 332.5,
+    "curtailed_h": 95.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 11.814894848450422,
+    "exp+diffusion -> nucleation": 45.86952420519265,
+    "nucleation -> exp+diffusion": 486.7399050025856,
+    "exp+diffusion -> exp+cascade": 45.92900594250841,
+    "exp+cascade -> exp+diffusion": 15.836489065549358,
+    "exp+lag -> exp+diffusion": 1.7773223741323818
+   },
+   "max_mag": 0.2316426233939136,
+   "n_events": 1865.0810833652383,
+   "min_sep": 11.814894848450422,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300+hold72@600",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 15.458333333333334,
+    "deferred_MWh": 332.5,
+    "curtailed_h": 95.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 12.971006039731492,
+    "exp+diffusion -> nucleation": 48.05549011737094,
+    "nucleation -> exp+diffusion": 769.8003617151821,
+    "exp+diffusion -> exp+cascade": 48.113381883495094,
+    "exp+cascade -> exp+diffusion": 17.93247196664379,
+    "exp+lag -> exp+diffusion": 1.9051398617361883
+   },
+   "max_mag": 0.2316426233939136,
+   "n_events": 1865.0810833652383,
+   "min_sep": 12.971006039731492,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300+hold72@600",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 15.458333333333334,
+    "deferred_MWh": 332.5,
+    "curtailed_h": 95.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 14.12601143848633,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.2316426233939136,
+   "n_events": 1865.0810833652383,
+   "min_sep": 14.12601143848633,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "rate2@300+hold48@600",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 12.791666666666666,
+    "deferred_MWh": 234.5,
+    "curtailed_h": 67.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.4195421917502244,
+    "exp+diffusion -> nucleation": 76.44953165884863,
+    "nucleation -> exp+diffusion": 434.73542938189075,
+    "exp+diffusion -> exp+cascade": 76.58089408654632,
+    "exp+cascade -> exp+diffusion": 50.7178426855744,
+    "exp+lag -> exp+diffusion": 1.6888042141094957
+   },
+   "max_mag": 0.25079742012631046,
+   "n_events": 2277.212742292822,
+   "min_sep": 2.4195421917502244,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate2@300+hold48@600",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 12.791666666666666,
+    "deferred_MWh": 234.5,
+    "curtailed_h": 67.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 2.6400881069484967,
+    "exp+diffusion -> nucleation": 84.39432103194531,
+    "nucleation -> exp+diffusion": 706.0343513513262,
+    "exp+diffusion -> exp+cascade": 81.18493083259455,
+    "exp+cascade -> exp+diffusion": 60.755008241303585,
+    "exp+lag -> exp+diffusion": 1.8303259379281371
+   },
+   "max_mag": 0.25079742012631046,
+   "n_events": 2277.212742292822,
+   "min_sep": 2.6400881069484967,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate2@300+hold48@600",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 12.791666666666666,
+    "deferred_MWh": 234.5,
+    "curtailed_h": 67.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.003182804247899,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1000.0,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.25079742012631046,
+   "n_events": 2277.212742292822,
+   "min_sep": 4.003182804247899,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300x2+hold72@600",
+   "mode": "occupancy",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 20.833333333333332,
+    "deferred_MWh": 406.0,
+    "curtailed_h": 116.0,
+    "tier": 0
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.435744587941372,
+    "exp+diffusion -> nucleation": 28.953285533693133,
+    "nucleation -> exp+diffusion": 679.6608546770381,
+    "exp+diffusion -> exp+cascade": 28.960232679708497,
+    "exp+cascade -> exp+diffusion": 19.13568827808922,
+    "exp+lag -> exp+diffusion": 1.3378336217856486
+   },
+   "max_mag": 0.18843513004642773,
+   "n_events": 1188.8174263626056,
+   "min_sep": 4.435744587941372,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300x2+hold72@600",
+   "mode": "counts",
+   "monitoring": "gauge",
+   "cost": {
+    "days": 20.833333333333332,
+    "deferred_MWh": 406.0,
+    "curtailed_h": 116.0,
+    "tier": 1
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 4.526742531874788,
+    "exp+diffusion -> nucleation": 30.271542282707514,
+    "nucleation -> exp+diffusion": 1039.7158362111386,
+    "exp+diffusion -> exp+cascade": 30.273508646400614,
+    "exp+cascade -> exp+diffusion": 20.533658325698525,
+    "exp+lag -> exp+diffusion": 1.3792667195389186
+   },
+   "max_mag": 0.18843513004642773,
+   "n_events": 1188.8174263626056,
+   "min_sep": 4.526742531874788,
+   "hardest": "exp+lag -> exp+diffusion"
+  },
+  {
+   "design": "rate3@300x2+hold72@600",
+   "mode": "counts",
+   "monitoring": "deepgauge",
+   "cost": {
+    "days": 20.833333333333332,
+    "deferred_MWh": 406.0,
+    "curtailed_h": 116.0,
+    "tier": 3
+   },
+   "pairs": {
+    "dieterich+diffusion(ta=178h) -> exp+diffusion": 5.815734763792989,
+    "exp+diffusion -> nucleation": 1000.0,
+    "nucleation -> exp+diffusion": 1039.7158362111386,
+    "exp+diffusion -> exp+cascade": 1000.0,
+    "exp+cascade -> exp+diffusion": 1000.0,
+    "exp+lag -> exp+diffusion": 1000.0
+   },
+   "max_mag": 0.18843513004642773,
+   "n_events": 1188.8174263626056,
+   "min_sep": 5.815734763792989,
+   "hardest": "dieterich+diffusion(ta=178h) -> exp+diffusion"
+  }
+ ],
+ "frontier": [
+  [
+   "BM2023",
+   "occupancy",
+   "gauge"
+  ],
+  [
+   "BM2023",
+   "counts",
+   "gauge"
+  ],
+  [
+   "BM2023",
+   "counts",
+   "deepgauge"
+  ],
+  [
+   "hold48@450+rate2@300",
+   "occupancy",
+   "gauge"
+  ],
+  [
+   "hold48@450+rate2@300",
+   "counts",
+   "gauge"
+  ],
+  [
+   "amp3@6h",
+   "occupancy",
+   "gauge"
+  ],
+  [
+   "amp3@6h",
+   "counts",
+   "gauge"
+  ],
+  [
+   "amp3@6h",
+   "counts",
+   "deepgauge"
+  ],
+  [
+   "hold72@600",
+   "occupancy",
+   "gauge"
+  ],
+  [
+   "hold72@600",
+   "counts",
+   "gauge"
+  ],
+  [
+   "hold72@600",
+   "counts",
+   "deepgauge"
+  ],
+  [
+   "rate3@300+hold72@600",
+   "occupancy",
+   "gauge"
+  ],
+  [
+   "rate3@300+hold72@600",
+   "counts",
+   "gauge"
+  ]
+ ],
+ "axes": {
+  "skill": {
+   "best": "exp+diffusion+cascade",
+   "loco": 0.1543622257941399,
+   "paper_best": "paper:p+dp/dt",
+   "paper_loco": 0.1027730745594477,
+   "dll_vs_paper": 81.66562640451768,
+   "ci95": [
+    47.78747278977745,
+    121.44372738999753
+   ],
+   "met": true
+  },
+  "separation": {
+   "BM2023_min": 0.8962189516578292,
+   "BM2023_hardest": "exp+diffusion -> exp+cascade",
+   "best_min": 69.48342415414845,
+   "met": true
+  },
+  "cost": {
+   "BM2023_MWh": 93.20500000000001,
+   "cheapest_decisive": {
+    "design": "rate3@300+hold72@600",
+    "mode": "occupancy",
+    "monitoring": "gauge",
+    "tier": 0,
+    "MWh": 332.5,
+    "days": 15.458333333333334,
+    "max_mag": 0.2316426233939136
+   },
+   "met": true,
+   "cheapest_decisive_with_deep_gauge": {
+    "design": "BM2023",
+    "MWh": 93.20500000000001,
+    "days": 7.083333333333333,
+    "max_mag": 0.270957814528495
+   },
+   "target": {
+    "tier": 1,
+    "MWh": 336.0,
+    "days": 21.0,
+    "max_mag": 0.46
+   },
+   "cheapest_decisive_any_schedule": {
+    "design": "hold72@600",
+    "mode": "occupancy",
+    "monitoring": "gauge",
+    "MWh": 259.0,
+    "days": 10.083333333333334,
+    "max_mag": 0.35493365333281
+   }
+  }
+ },
+ "weakest": null
+}
