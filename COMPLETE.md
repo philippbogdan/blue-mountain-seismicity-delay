@@ -1,6 +1,6 @@
 # COMPLETE
 
-All numbers from commit `81a6bd05ce4e544332c37230dd5f0a7271390afc`; `make all` regenerates results/, figs/ and these documents.
+All numbers from commit `f24b9b36f0c26eaabb0ed02ffd749fc3b64033e0`; `make all` regenerates results/, figs/ and these documents.
 
 ## The four deliverables hold
 
@@ -27,7 +27,7 @@ D = L^2/(4 tau) at the cloud's median depth below the lateral (L = 584 m) for 1-
 | dieterich+lag | 0.1442 | 16.0 [5.6, 26.8] | 10.56 | - |
 | exp+cascade | 0.1437 | 16.8 [6.7, 27.4] | - | - |
 | exp+lag | 0.1435 | 17.2 [6.3, 28.4] | 10.56 | - |
-| exp+gamma | 0.1425 | 18.8 [7.3, 31.3] | 9.51 | 2.49 |
+| exp+gamma | 0.1425 | 18.8 [7.3, 31.3] | 9.51 | - |
 | exp+diffusion+poro | 0.1423 | 19.1 [7.9, 30.7] | 1.30 | 18.25 |
 | dieterich+cascade | 0.1418 | 19.9 [8.3, 33.0] | - | - |
 | exp+shift | 0.1311 | 36.9 [9.2, 68.9] | 5.75 | - |
@@ -50,6 +50,6 @@ Against the independent fault-zone diffusivity 0.08-0.33 m2/s: the transport tim
 | event positions relative to the stimulated fractures (diffusivity) | unpublished quantity | 3-D locations or a gauge at the seismic depth |
 | the catalogue's time zone (scale of tau) | unpublished quantity | raw DAS file name of any catalogued event |
 | a finite fault response time (slow-ramp saturation) | physics not excited by 10-h ramps | holds with a gauge at the seismic depth |
-| ramp rate at fixed amplitude | the experiment as run | the rate series of FINDINGS 8 |
-| five cycles | the experiment as run | more cycles (the test) |
+| rate dependence at fixed amplitude | physics not excited by the cycles as run (rate and amplitude co-varied; PROBLEM.md: ramp rate never varied on purpose) | the rate series of FINDINGS 8 |
+| between-cycle variability (cycle V's lag, cycle IV's post-shut-in dip) | physics: seismicity is stochastic, and five cycles sample its variability | more cycles (the test) |
 | how the published distances were computed | unpublished method | the authors' location code |
