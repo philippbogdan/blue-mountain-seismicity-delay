@@ -57,6 +57,12 @@ class Data:
         self.occ[:n] = occ[:n]
         self.obs[:n] = obs[:n]
         self.shift_h = shift_h
+        # magnitude of the catalogued event in each occupied minute (for cascades)
+        c = io.load_catalog() if cat is None else cat
+        k = np.floor((c.th.to_numpy() - shift_h - t0) * 60 + 1e-6).astype(int)
+        ok = (k >= 0) & (k < len(self.t))
+        self.mag = np.full(len(self.t), np.nan)
+        self.mag[k[ok]] = c.mag.to_numpy()[ok]
 
     def mask(self, names):
         m = np.zeros(len(self.t), bool)
@@ -69,6 +75,9 @@ class Data:
 def transport(p, kind, tau_h, dt=DT_H):
     if kind == "none" or tau_h <= 0:
         return p.copy()
+    if kind == "shift":
+        k = min(int(round(tau_h / dt)), len(p))
+        return np.r_[np.full(k, p[0]), p[:len(p) - k]]
     n = len(p)
     tk = (np.arange(n) + 0.5) * dt
     if kind == "diffusion":
@@ -97,6 +106,8 @@ def rate_model(d, spec, th):
     pf = transport(d.p, spec["transport"], th.get("tau", 0.0))
     law = spec["law"]
     S = pf - pf[0]
+    if "beta" in th:                      # instantaneous poroelastic stress, either sign
+        S = S + th["beta"] * (d.p - d.p[0])
     if law == "exp":
         return th["r0"] * np.exp(np.clip(S / th["As"], -50, 50))
     if law == "dieterich":
@@ -112,6 +123,17 @@ def rate_model(d, spec, th):
     if law == "const":
         return np.full(len(d.t), th["r0"])
     raise ValueError(law)
+
+
+def omori_rate(d, K, c_h, p_om, alpha=0.0, m0=-0.8):
+    """Rate triggered by the catalogued events: sum_i K e^{alpha (m_i - m0)}
+    (p-1)/c (1 + (t - t_i)/c)^{-p}, starting one minute after each event."""
+    n = len(d.t)
+    w = np.where(np.isfinite(d.mag), np.exp(alpha * (np.nan_to_num(d.mag, nan=m0) - m0)), 0.0)
+    lag = (np.arange(n) + 1) * DT_H
+    ker = K * (p_om - 1) / c_h * (1 + lag / c_h) ** (-p_om)
+    trig = signal.fftconvolve(w, ker)[:n]
+    return np.r_[0.0, trig[:-1]]
 
 
 def loglik_terms(R, d):
