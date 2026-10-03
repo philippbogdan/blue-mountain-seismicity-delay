@@ -10,7 +10,6 @@ make all          # results/*.json, figs/*.png, FINDINGS.md, REPORT.md, COMPLETE
 make light        # same, reusing the validation sweeps and design grid already in results/
 ```
 
-On the shared Mac run it through the queue: `gpurun --on mac --cpus 6 --mem 4 make all`.
 `results/manifest.json` records the commit the numbers came from.
 
 Environment: Python 3.12, `uv pip install -r requirements.txt` into `.venv`.
@@ -39,3 +38,5 @@ Environment: Python 3.12, `uv pip install -r requirements.txt` into `.venv`.
 | `predict` | slower-ramp scenarios with jackknife uncertainty |
 | `design`, `design_mc`, `frontier` | expected separation of explanations for candidate tests, Monte-Carlo check, frontier |
 | `numbers`, `figures`, `report`, `run_all` | collected numbers, figures, documents, the one command |
+
+The code is under the MIT licence (`LICENSE`). The data keep their own licences: the OSF data set and the accepted manuscript are CC BY 4.0 (cite doi:10.17605/OSF.IO/D65BA and doi:10.1029/2025JB031634); USGS ComCat data are public domain.
