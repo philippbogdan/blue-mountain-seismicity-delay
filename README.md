@@ -1,42 +1,34 @@
-# What sets the seismicity delay in the cycled Blue Mountain reservoir
+# Why do earthquakes lag behind pressure at Blue Mountain?
 
-Problem: `PROBLEM.md`; goal: `GOAL.md`. Results: `FINDINGS.md` (claims with evidence),
-`REPORT.md` (criteria against the floor, failures, open questions), `COMPLETE.md`.
+The models favour pressure taking time to reach the faults as an explanation for the earthquake delay. Deeper events tend to respond later. This interpretation assumes the pressure and earthquake records share the same clock, which remains uncertain.
 
-## Regenerate everything
+This project reanalyses the 2023 geothermal test at Blue Mountain, Nevada. The question: what causes the delay, and could slower pressure rises change it?
 
+The data cannot isolate the effect of rise speed: faster rises also reached higher pressures. Of five cycles, one gives a clear timing signal and another is partly cut off by missing data. In the best model, slower rises to the same pressure produce more earthquakes but a smaller gap between the pressure and earthquake peaks. Those are predictions, not measurements.
+
+## Find your way in
+
+- [FINDINGS.md](FINDINGS.md): detailed results, evidence and a proposed follow-up test.
+- [REPORT.md](REPORT.md) and [COMPLETE.md](COMPLETE.md): assessment, open questions and completion record.
+- [PROBLEM.md](PROBLEM.md): the original research question.
+- [figs/](figs/), [results/](results/) and [blm/](blm/): figures, result files and analysis code.
+
+## Reproduce
+
+Requires Python 3.12, `uv`, `make` and Git. From the repository root:
+
+```sh
+uv venv --python 3.12 .venv
+uv pip install -r requirements.txt
+make all
 ```
-make all          # results/*.json, figs/*.png, FINDINGS.md, REPORT.md, COMPLETE.md
-make light        # same, reusing the validation sweeps and design grid already in results/
-```
 
-`results/manifest.json` records the commit the numbers came from.
+This regenerates the results, figures and three technical documents above. `make light` reuses the saved validation and design runs. [results/manifest.json](results/manifest.json) records the source commit and Python version.
 
-Environment: Python 3.12, `uv pip install -r requirements.txt` into `.venv`.
+## Sources and licences
 
-## Data
+- Chamarczuk and colleagues: [OSF data](https://doi.org/10.17605/OSF.IO/D65BA) and [accepted manuscript](https://doi.org/10.1029/2025JB031634), both CC BY 4.0. See [data/README.md](data/README.md) for provenance and file checksums.
+- USGS ComCat earthquake records: public domain.
+- Iowa Environmental Mesonet: Winnemucca ASOS weather records. No licence is recorded here for these files.
 
-- `data/osf-d65ba/`: the public OSF data set (doi:10.17605/OSF.IO/D65BA), see `data/README.md`.
-- `data/paper/`: text of the accepted manuscript (doi:10.1029/2025JB031634).
-- `data/external/`: UTC references fetched for the clock checks: USGS ComCat events
-  within 400 km and global M>=6 (fdsnws, 2 Oct 2026); Winnemucca (KWMC) ASOS hourly
-  barometer and wind from the Iowa Environmental Mesonet.
-
-## Code (`blm/`)
-
-| module | what |
-|---|---|
-| `io` | loaders; every file on its own clock |
-| `tides`, `clock` | Earth tide / barometer regression of the gauge, operating schedule, outage restarts, rate-file offsets |
-| `front` | the published diffusion front: exact identification, conventions, distance artefact, catalogue stationarity |
-| `rates` | occupancy (one event per 1-minute file) and outage handling |
-| `response` | model-free per-cycle response (excess, lags) by depth and radial class |
-| `models`, `fit` | transport x fault-law models, occupancy likelihood, maximum likelihood |
-| `validate`, `compare` | held-out schemes (leave-one-cycle-out, slow<->fast, forward) and block-bootstrap comparisons |
-| `distance` | depth-resolved transport times (joint multi-class likelihood) |
-| `profile`, `xcorr`, `ppc` | profile likelihoods, model-free lags per clock shift, per-cycle predictive checks |
-| `predict` | slower-ramp scenarios with jackknife uncertainty |
-| `design`, `design_mc`, `frontier` | expected separation of explanations for candidate tests, Monte-Carlo check, frontier |
-| `numbers`, `figures`, `report`, `run_all` | collected numbers, figures, documents, the one command |
-
-The code is under the MIT licence (`LICENSE`). The data keep their own licences: the OSF data set and the accepted manuscript are CC BY 4.0 (cite doi:10.17605/OSF.IO/D65BA and doi:10.1029/2025JB031634); USGS ComCat data are public domain.
+The code is [MIT licensed](LICENSE). Data retain their own licences.
